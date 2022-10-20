@@ -1,3 +1,4 @@
+/* MADE BY ERWAN */
 import {Link} from "react-router-dom"
 import greylogo from "../img/greylogo.png"
 
@@ -8,7 +9,7 @@ export default function LandingPage() {
                 <img className="logo-landing" src={greylogo} alt="TrackIt Logo"></img>
             </div>
             <div className="text-landing-container">
-                <h1 className="text-landing">Welcome to TrackIt!<br></br>The app where you track your series!</h1>
+                <h1 className="text-landing">Welcome</h1>
             </div>
             <div className="button-landing-container">
                 <Link to="/login">

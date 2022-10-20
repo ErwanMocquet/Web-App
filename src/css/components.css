@@ -1,0 +1,178 @@
+:root {
+    --grey: #e2e2e2;
+    --lightblue: #3E85DF;
+}
+
+/* CONTINUE WITH COMPONENT (Erwan) */
+
+.continue-with-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.continue-text{
+    color: var(--grey);
+    font-family: forma-djr-text, sans-serif;
+    font-size: 1.2rem;
+
+}
+
+.continue-logos-cont{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+.icon {
+    color: var(--grey);
+    margin: auto;
+}
+
+/* BOTTOM NAVBAR (Igor) */
+
+.nav-cont {
+    background: var(--lightblue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5em 0;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 999;
+    width: 100%;
+}
+
+.nav-icon {
+    color: var(--grey);
+}
+
+.nav-singlebutton-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-interline {
+    width: 0.1em;
+    height: 3em;
+    background-color: var(--grey);
+}
+
+.nav-underline {
+    width: 2.5em;
+    height: 0.1em;
+    background-color: var(--grey);
+}
+
+#navlast {
+    margin-right: 0.5em;
+}
+
+#navfirst {
+    margin-left: 0.7em;
+}
+
+.active {
+    text-decoration: red 2px solid;
+}
+
+/* CARDS STYLING (Erwan and Igor) */
+
+.main-card{
+    display: flex;
+    justify-content: center;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr;
+    position: relative;
+    justify-content: center;
+    width: 85%;
+    background-color: var(--grey);
+    border-radius: 20px;
+}
+
+.image-cards-container{
+    width: 10rem;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.image-cards{
+    width: 200%;
+    position: relative;
+    right: 50%;
+}
+
+.content-container{
+    width: auto;
+    margin-left: 1rem;
+}
+
+.platform-cards{
+    width: 20%;
+}
+
+.profile-cards-container{
+    position: absolute;
+    width: 1.5em;
+    left: -4%;
+    top: 7%;
+    z-index: 99;
+}
+
+.profile-cards{
+    width:100%;
+}
+
+.text-cards{
+    font-family: forma-djr-text, sans-serif;
+    margin: 0.5rem 0;
+}
+
+.card-gradient {
+    position: relative;
+    z-index: 1;
+}
+
+.card-gradient:after {
+    content: '';
+    border-radius: 20px;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to right, transparent, 80%, var(--grey))
+}
+
+.title-content-card{
+    font-size: 1.2rem;
+}
+
+.whereat-content-card{
+    font-size: 1rem;
+}
+
+.description-content-card{
+    font-size: 0.9rem;
+}
+
+.add-series-arrow-container{
+    background-color: var(--lightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 20%;
+}
+
+.add-series-arrow{
+    color: #e2e2e2;
+}
+
+
+

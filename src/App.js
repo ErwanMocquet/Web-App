@@ -1,4 +1,5 @@
-import './index.css';
+import './css/index.css';
+import "./css/components.css";
 import {Route, Navigate, Routes} from "react-router-dom";
 import LandingPage from "./pages/LandingPage.js"
 import SignupPage from "./pages/SignUpPage.js"
