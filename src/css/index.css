@@ -52,7 +52,6 @@ table {
 }
 
 /* End of reset CSS */
-
 /* CSS VARIABLES SET */
 
 :root {
@@ -222,15 +221,22 @@ body{
  }
 
  .settings-icon-outer {
-    width: 60%;
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
  }
 
-.settings-icon {
-    display: flex;
-    justify-content:end;
-    align-items: flex-end; 
+.settings-icon svg {
     color: var(--grey);
-    
+    height: 100%;
+    width: 100%;
+}
+
+.profile-separator {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .profile-username {
@@ -243,6 +249,89 @@ body{
     margin: 1em 0em 1.5em 1.5em;
 }
 
+.profile-section-line {
+    width: 90%;
+}
+
+.profile-statistics {
+    width: 90%;
+}
+
+.profile-statistics-stats-outer h1 {
+ font-size: 1.2em;
+ margin-top: 15px;
+ margin-bottom: 15px;
+
+}
+
+.profile-statistics-stats {
+    display: flex;
+    width: 100%;
+}
+
+.profile-statistics-badges {
+    display: flex;
+    margin-top: 20px;
+    gap: 26px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: stretch;
+    flex-wrap: wrap;
+
+}
+
+
+.profile-statistics-badges > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-history {
+    width: 90%;
+    margin-top: 15px;
+
+}
+
+.profile-history-cards-outer {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.profile-history-cards {
+    display: flex;
+    width: fit-content;
+    gap: 20px;
+}
+
+.profile-history-card {
+    width: 100px;
+    height: 150px;
+    background: blue;
+
+}
+
+.profile-statistics-stats .left,
+.profile-statistics-stats .center,
+.profile-statistics-stats .right {
+    width: 33%;
+}
+
+.profile-statistics-stats .left {
+    text-align: left;
+}
+
+.profile-statistics-stats .center {
+    text-align: center;
+}
+
+.profile-statistics-stats .right {
+    text-align: right;
+}
+
+.profile-bio {
+    text-align: center;
+}
+
 .follow-button {
     background: none;
 	color: var(--grey);
@@ -251,4 +340,43 @@ body{
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;  
+}
+
+/* CURRENT PAGE STYLING (ERWAN) */
+
+.first-heading-current{
+    font-family: forma-djr-text, sans-serif;
+    color: #e2e2e2;
+    font-size: 1.5rem;
+    margin: 0 0 2rem 2rem
+}
+
+.heading-current{
+    font-family: forma-djr-text, sans-serif;
+    color: #e2e2e2;
+    font-size: 1.5rem;
+    margin: 2rem 0 2rem 2rem
+}
+
+/* EXLORE PAGE STYLING */
+.for-you-main {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.trending-main {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.themes-main {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 6rem;
+}
+
+.explore-heading-one {
+    font-family: forma-djr-text, sans-serif;
+    color: #e2e2e2;
+    font-size: 1.5rem;
 }

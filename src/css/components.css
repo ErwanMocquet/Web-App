@@ -74,11 +74,8 @@
     margin-left: 0.7em;
 }
 
-.active {
-    text-decoration: red 2px solid;
-}
 
-/* CARDS STYLING (Erwan and Igor) */
+/* CARDS FOR CURRENT STYLING (Erwan and Igor) */
 
 .main-card{
     display: flex;
@@ -96,13 +93,13 @@
 }
 
 .image-cards-container{
-    width: 10rem;
+    height: 10.1em;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
 }
 
 .image-cards{
-    width: 200%;
+    width: 230%;
     position: relative;
     right: 50%;
 }
@@ -113,7 +110,7 @@
 }
 
 .platform-cards{
-    width: 20%;
+    width: 15%;
 }
 
 .profile-cards-container{
@@ -126,6 +123,8 @@
 
 .profile-cards{
     width:100%;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 0.85rem rgb(56, 56, 56));
 }
 
 .text-cards{
@@ -136,15 +135,17 @@
 .card-gradient {
     position: relative;
     z-index: 1;
+    height: 10.1em;
 }
 
 .card-gradient:after {
     content: '';
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     position: absolute;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(to right, transparent, 80%, var(--grey))
+    left: 0.5em; top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, 70%, var(--grey))
 }
 
 .title-content-card{
@@ -167,12 +168,182 @@
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
-    margin-top: 20%;
+    margin-top: 30%;
 }
 
 .add-series-arrow{
-    color: #e2e2e2;
+    color: var(--grey);
+}
+
+/* CARDS FOR UPCOMING STYLING (ERWAN) */
+
+.card-container-upcoming{
+    display: grid;
+    grid-template-columns: 2fr 2.5fr;
+    position: relative;
+    justify-content: center;
+    width: 85%;
+    background-color: var(--grey);
+    border-radius: 20px;
+}
+
+.upcoming-content-container {
+    padding-right: 0.3rem;
+    width: auto;
+    padding-left: 1rem;
+}
+
+.upcoming-image-cards-container {
+    height: 11rem;
+    overflow: hidden;
+    border-radius: 20px 0 0 20px;
+}
+
+.upcoming-card-gradient {
+    position: relative;
+    z-index: 1;
+    height: 11em;
+}
+
+.upcoming-card-gradient:after {
+    content: '';
+    border-radius: 20px 0 0 20px;
+    position: absolute;
+    left: 0.5em; top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, 70%, var(--grey))
+}
+
+.image-cards-upcoming{
+    width: 230%;
+    position: relative;
+    right: 50%;
 }
 
 
+/* CARDS FOR EXPLORE STYLING (KATE) */
+
+.explore-card-container {
+    display: grid;
+    grid-template-rows: 1.8fr 2fr 0.3fr;
+    position: relative;
+    text-align: center;
+    background-color: var(--grey);
+    border-radius: 20px;
+    width: 45%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.image-explore-cards-container{
+    width: 9.6rem;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0px;
+}
+
+.explore-card-gradient {
+    position: relative;
+    z-index: 1;
+    height: 8.1rem;
+}
+
+.explore-card-gradient:after {
+    content: '';
+    background: linear-gradient(to bottom, transparent, 70%, var(--grey));
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+} 
+
+.image-explore-cards{
+    width: 150%;
+    position: relative;
+    right: 20%;
+}
+
+.explore-profile-cards-container{
+    position: absolute;
+    width: 1.5em;
+    left: -8%;
+    top: 6%;
+    z-index: 99;
+}
+
+.explore-profile-cards {
+    width: 120%;
+    margin-bottom: 0.2rem;
+    filter: drop-shadow(0 0 0.85rem rgb(56, 56, 56));
+}
+
+.explore-content-container {
+    text-align: left;
+    margin-left: 0.7rem;
+}
+
+.explore-title-content-card {
+    font-size: 1.3rem;
+    padding-bottom: 0.7rem;
+    font-family: forma-djr-text, sans-serif;
+}
+
+.explore-content-card{
+    font-size: 0.9rem;
+    font-family: forma-djr-text, sans-serif;
+}
+
+.platform-icons {
+    width: 25%;
+}
+
+.plus-button-container{
+    background-color: var(--lightblue);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    bottom: -3%;
+    left: 37%;
+    z-index: 99;
+}
+
+.plus-button{
+    color: var(--grey);
+}
+
+/* TOPNAV (Igor) */
+
+.topnav-cont {
+    display: flex;
+    flex-direction: row;
+    font-family: forma-djr-text, sans-serif;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em 2em;
+    height: 2em;
+}
+
+.topnav-singleitem-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topnav-link {
+    text-transform: uppercase;
+    color: var(--grey);
+    font-size: 1.3rem;
+}
+
+.topnav-interline {
+    background-color: var(--grey);
+    width: 0.08em;
+    height: 1.1em;
+    margin-bottom: 0.2em;
+}
+
+.active{
+    border-bottom: #3E85DF 4px solid;
+}
 

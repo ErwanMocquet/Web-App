@@ -11,21 +11,21 @@ export default function BottomNav() {
                 <NavLink to="/current" end>
                     <HomeIcon className="nav-icon" sx={{ fontSize: "2.5em" }} />
                 </NavLink>
-                <div className="nav-underline"></div>
+                {/* <div className="nav-underline"></div> */}
             </div>
             <span className="nav-interline"></span>
             <div className="nav-singlebutton-cont">
                 <NavLink to="/explore" end>
                     <ExploreIcon className="nav-icon" sx={{ fontSize: "2.5em" }} />
                 </NavLink>
-                <div className="nav-underline"></div>
+                {/* <div className="nav-underline"></div> */}
             </div>
             <span className="nav-interline"></span>
             <div className="nav-singlebutton-cont" id="navlast">
                 <NavLink to="/profile" end>
                     <PersonIcon className="nav-icon" sx={{ fontSize: "2.5em" }} />
                 </NavLink>
-                <div className="nav-underline"></div>
+                {/* <div className="nav-underline"></div> */}
             </div>
         </div>
     )

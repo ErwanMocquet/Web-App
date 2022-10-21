@@ -1,36 +1,46 @@
 /* MADE BY MAGDANELA */
-import {Link} from "react-router-dom"
-import SettingsIcon from '@mui/icons-material/Settings';
-import KateProfile from "../img/karuno.svg"
+import { Link, NavLink } from "react-router-dom";
+import SettingsIcon from "@mui/icons-material/Settings";
+import KateProfile from "../img/karuno.svg";
+import BottomNav from "../components/BottomNav";
 
-export default function FollowingPage() {
-return (
+export default function ProfilePage() {
+  return (
     <section>
-    <div>
+      <BottomNav />
+      <div className="settings-icon-outer">
         <div className="settings-icon">
+          <NavLink to="/settings">
             <SettingsIcon />
+          </NavLink>
         </div>
-    </div>
+      </div>
 
-<div className="profile-image">
-    <img src={KateProfile} alt="profile" /> 
-        <div className="profile-bio">
+      <div className="profile-page">
+        <div className="profile-image">
+          <img src={KateProfile} alt="profile" />
+          <div className="profile-bio">
             <h1 className="profile-username">Karuno Kami</h1>
             <p>Series Crusher</p>
-                <div className="profile-followers">
-                    
-                    <Link to="/following"><button type="button">Following 11</button></Link>
-                    <p> | </p>
-                    <Link to="/followers"><button type="button"><p>Followers 23</p></button></Link>
+            <div className="profile-followers">
+              <Link to="/following">
+                <button type="button" className="follow-button">
+                  Following 11
+                </button>
+              </Link>
 
-                </div>
+              <span className="profile-separator">|</span>
+
+              <Link to="/followers">
+                <button type="button" className="follow-button">
+                  <p>Followers 23</p>
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
-</div>
 
-<div className="profile-section-line"></div>
-
-    <div className="followers-list">
-        <div>Following 11</div>
+        <hr className="profile-section-line" />
                 
                 <div className="back-button-container">
                     <Link to="/profile">
