@@ -7,7 +7,7 @@ export default function UpcomingPage () {
         <div>
             <TopNav />
             <BottomNav />
-            <div className="current-main">
+            <div className="upcoming-main">
                 <Cards />
             </div>
         </div>

@@ -1,6 +1,7 @@
 :root {
     --grey: #e2e2e2;
     --lightblue: #3E85DF;
+    --darkblue: #061D47;
 }
 
 /* CONTINUE WITH COMPONENT (Erwan) */
@@ -107,6 +108,7 @@
 .content-container{
     width: auto;
     margin-left: 1rem;
+    color: black;
 }
 
 .platform-cards{
@@ -234,6 +236,7 @@
     width: 45%;
     margin-left: 5%;
     margin-top: 5%;
+    margin-right: 5%;
 }
 
 .image-explore-cards-container{
@@ -312,6 +315,26 @@
     color: var(--grey);
 }
 
+/* DESCRIPTION COMPONENTS (KATE) */
+/* THE TOP (KATE) */
+.description-image {
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.description-header {
+    color: var(--grey);
+    font-family: forma-djr-deck, sans-serif;
+    font-size: 2rem;
+}
+
+.description-text {
+    color: var(--grey);
+    font-family: forma-djr-text, sans-serif;
+    font-size: 1rem;
+}
+
 /* TOPNAV (Igor) */
 
 .topnav-cont {
@@ -322,6 +345,14 @@
     align-items: center;
     margin: 2em 2em;
     height: 2em;
+}
+
+.topnav {
+    background-color: var(--darkblue);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 9999;
 }
 
 .topnav-singleitem-cont {
@@ -344,6 +375,30 @@
 }
 
 .active{
-    border-bottom: #3E85DF 4px solid;
+    border-bottom: var(--lightblue) 4px solid;
 }
+
+/* helping topnav on current, upcoming and wishlist */
+
+.current-main, .upcoming-main, .wishlist-main {
+    margin-top: 100px;
+}
+
+/* DESKTOP */
+
+.desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+
+    /* FOOTER STYLING (Igor) */
+}
+
 

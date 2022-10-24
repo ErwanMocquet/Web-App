@@ -7,7 +7,7 @@ export default function WishlistPage () {
         <div>
             <TopNav />
             <BottomNav />
-            <div className="current-main">
+            <div className="wishlist-main">
                 <Cards />
             </div>
         </div>

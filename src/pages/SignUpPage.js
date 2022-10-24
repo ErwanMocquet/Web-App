@@ -2,12 +2,14 @@
 import {Link} from "react-router-dom";
 import ContinueWith from "../components/ContinueWith";
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
+import LandingDesktopLeft from "../components/LandingDesktopLeft";
 
 export default function LoginPage() {
     return (
-        <section className="loginpage-main">
+        <section className="signuppage-main">
+            <div className="signuppage-right">
                 <div className="photo-signup-container">
-                    <AddAPhotoIcon sx={{ fontSize: "7rem" }} className="photo-signup"/>
+                    <AddAPhotoIcon sx={{ fontSize: "5rem" }} className="photo-signup mobile"/>
                 </div>
                 <div className="input-login-container"> 
                     <label htmlFor="inputfield-username" className="input-label">Username:</label>
@@ -25,6 +27,8 @@ export default function LoginPage() {
                         <button type="button" className="button-next-beginning">NEXT</button>
                     </Link>
                 </div>
+            </div>
+            <LandingDesktopLeft />
         </section>
     )
 };

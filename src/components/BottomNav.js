@@ -6,7 +6,7 @@ import PersonIcon from '@mui/icons-material/Person';
 
 export default function BottomNav() {
     return (
-        <div className="nav-cont">
+        <div className="nav-cont mobile">
             <div className="nav-singlebutton-cont" id="navfirst">
                 <NavLink to="/current" end>
                     <HomeIcon className="nav-icon" sx={{ fontSize: "2.5em" }} />

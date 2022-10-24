@@ -81,18 +81,18 @@ body{
 
 .text-landing-container{
     text-align: center;
-    margin: 15% 1em 0 1em
+    margin: 15% 0 5% 0;
 
 }
 
 .text-landing{
     color: var(--grey);
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: forma-djr-deck, sans-serif;
 }
 
 .button-landing-container{
-    margin-top: 15%;
+    margin-top: 10%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -104,13 +104,19 @@ body{
     display: block;
     width: 12rem;
     height: 3rem;
-    border-radius: 20px;
+    border-radius: 25px;
     border: none;
     background-color: var(--peach);
     font-family: forma-djr-text, sans-serif;
     font-size: 2rem;
     cursor: pointer;
     color: var(--darkblue);
+}
+
+.bl-two {
+    background-color: var(--darkblue);
+    border: solid var(--peach);
+    color: var(--peach);
 }
 
 /* LOGIN PAGE MOBILE VERSION (Erwan) */
@@ -217,7 +223,6 @@ body{
     margin: 10px;
     font-size: 1.1em;
     font-family: forma-djr-text, sans-serif;
-
  }
 
  .settings-icon-outer {
@@ -358,7 +363,70 @@ body{
     margin: 2rem 0 2rem 2rem
 }
 
-/* EXLORE PAGE STYLING */
+/* EXLORE PAGE STYLING (KATE) */
+.search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.search-form {
+    margin-top: 5%;
+    margin-left: 3%;
+    background-color: var(--grey);
+    border-radius: 20px;
+    height: 2.5rem;
+    outline: none;
+    font-size: 1.2rem;
+    font-family: forma-djr-text, sans-serif;
+    display: flex;
+    width: 75%;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    margin-right: 20%;
+}
+
+.search-button {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 40px;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+.search-button:hover {
+    opacity: 1
+}
+
+.search-button:focus,
+.search-input:focus {
+  outline: none;
+}
+
+.filter-icon {
+    color: var(--grey);
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+    padding-bottom: 5%;
+}
+
 .for-you-main {
     margin-top: 2rem;
     margin-left: 2rem;
@@ -379,4 +447,98 @@ body{
     font-family: forma-djr-text, sans-serif;
     color: #e2e2e2;
     font-size: 1.5rem;
+}
+
+/* Desktop invisible (Igor) */
+
+.landingpage-left {
+    display: none;
+}
+
+/* IMPORTANT */
+/* ! ! ! ! ! DESKTOP VERSIONS ! ! ! ! ! */
+
+@media only screen and (min-width: 1000px) {
+
+    .mobile {
+        display: none;
+    }
+
+    /* LANDING PAGE + LOGIN PAGE + SIGNUP PAGE (Igor) */
+    .landingpage-left {
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        background-image: url('../img/seriesbackground.png');
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .landingpage-right, .loginpage-right, .signuppage-right {
+        width: 45%;
+    }
+
+    .landing-main, .loginpage-main, .signuppage-main {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .landing-welcome-heading {
+        color: var(--grey);
+        font-family: forma-djr-text, sans-serif;
+        font-size: 3em;
+    }
+
+    .text-landing-container {
+        margin: 0;
+    }
+
+    .button-landing {
+        border-radius: 50px;
+        width: 15rem;
+        height: 5rem;
+        font-size: 3rem;
+    }
+
+    .bl-one:hover {
+        transition: 1s;
+        border: solid var(--peach);
+        color: var(--peach);
+        background-color: var(--darkblue);
+    }
+
+    .bl-two:hover {
+        transition: 1s;
+        border: solid var(--darkblue);
+        color: var(--darkblue);
+        background-color: var(--peach);
+    }
+
+    .landing-welcome-cont, .landing-welcome-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .landing-welcome-cont {
+        margin-bottom: 2em;
+    }
+
+    .photo-signup-container {
+        width: 10em;
+        height: 10em;
+        margin-top: 8%;
+    }
+
+    .input-login-container {
+        margin-top: 5%;
+    }
+
+    .button-next-beginning {
+        cursor: pointer;
+    }
+    /* end of landing and login pages */
 }

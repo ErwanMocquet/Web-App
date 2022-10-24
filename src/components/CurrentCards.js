@@ -2,7 +2,7 @@
 import barbarians from "../img/barbarians.jpg";
 import netflix from "../img/netflix-icon.png"
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import KateProfile from "../img/karuno.svg"
+import KateProfile from "../img/karuno.svg";
 
 export default function CurrentPage() {
 
