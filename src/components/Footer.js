@@ -8,10 +8,10 @@ export default function Footer() {
                 <img src={logoplain} alt="TrackIt logo" className="footer-logo"></img>
             </div>
             <div className="footer-links-cont">
-                <Link to="#">Privacy policy</Link>
-                <Link to="#">Terms of use</Link>
-                <Link to="#">Supported devices</Link>
-                <Link to="#">Help center</Link>
+                <Link to="#" className="footerlink">Privacy policy</Link>
+                <Link to="#" className="footerlink">Terms of use</Link>
+                <Link to="#" className="footerlink">Supported devices</Link>
+                <Link to="#" className="footerlink">Help center</Link>
             </div>
         </div>
     )

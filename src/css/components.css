@@ -320,23 +320,132 @@
 .description-image {
     width: 100%;
     position: fixed;
+    z-index: -2;
+}
+
+.description-gradient {
+    position: relative;
+    z-index: -1;
+    height: 35rem;
+}
+
+.description-gradient:after {
+    content: '';
+    background: linear-gradient(to bottom, transparent, 70%, rgb(37, 37, 37));
+    position: fixed;
+    top: 0; left: 0;
+    height: 35rem;
+    width: 100%;
     z-index: -1;
 }
 
-.description-header {
+.back-button-container {
+    position: fixed;
+    top: 3%;
+    left: 5%;
+    z-index: 99;
+}
+
+.back-button {
+    color: var(--peach);
+    filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.74));
+}
+
+.text-container {
+    text-shadow: 5px 3px 4px #000000;
     color: var(--grey);
-    font-family: forma-djr-deck, sans-serif;
+    margin-top: -45%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+
+.description-header {
     font-size: 2rem;
+    font-family: forma-djr-deck, sans-serif;
+    padding-bottom: 5%;
 }
 
 .description-text {
-    color: var(--grey);
     font-family: forma-djr-text, sans-serif;
     font-size: 1rem;
 }
+/* THE EPISODE CARD (KATE) */
+.episode-card-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr;
+    position: relative;
+    justify-content: center;
+    width: 85%;
+    background-color: var(--grey);
+    border-radius: 20px;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.image-episode-card {
+    height: 4.8rem;
+    overflow: hidden;
+    border-radius: 20px 0 0 20px;
+}
+
+.episode-image {
+    width: 130%;
+    position: relative;
+    right: 10%;
+}
+
+.episode-name {
+    font-family: forma-djr-deck, sans-serif;
+    font-size: 1.1rem;
+    padding-top: 6%;
+    padding-left: 6%;
+}
+
+.episode-time {
+    font-family: forma-djr-text, sans-serif;
+    font-size: 1rem;
+    padding-top: 5%;
+    padding-left: 6%;
+}
+
+.add-episode {
+    background-color: var(--lightblue);
+    display: flex;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 120%;
+}
+
+.add-episode-button {
+    color: var(--grey);
+}
+/* THE ACTOR (KATE) */
+.actor-container {
+    padding-top: 5%;
+}
+
+.actor-content {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+}
+
+.actor-image {
+    width: 5rem;
+}
+
+.actor-name {
+    font-family: forma-djr-deck, sans-serif;
+    font-size: 1.7rem;
+    color: var(--grey);
+    padding-top: 7%;
+    padding-left: 5%;
+}
 
 /* TOPNAV (Igor) */
-
 .topnav-cont {
     display: flex;
     flex-direction: row;
@@ -399,6 +508,101 @@
     }
 
     /* FOOTER STYLING (Igor) */
+
+    .footer-main {
+        margin-top: 4em;
+    }
+
+    .footer-logo-cont {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links-cont {
+        display: flex;
+        justify-content: space-around;
+        margin: 2em 20%;
+        font-family: forma-djr-text, sans-serif;
+        font-size: 1.3em;
+    }
+
+    .footer-logo {
+        width: 12em;
+    }
+    
+    .footerlink {
+        text-decoration: none;
+        color: var(--grey);
+    }
+    
+    /* DESKTOP TOP NAVIGATION (Igor) */
+
+    /* margin to mains */
+    .explore-main {
+        margin-top: 100px;
+    }
+
+    .topdesk-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1em 3em;
+    }
+
+    .topdesk-general-cont {
+        background-color: var(--darkblue);
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        z-index: 9999;
+    }
+
+    .topdesk-logo {
+        width: 10em;
+    }
+
+    .topdesk-links {
+        display: flex;
+        font-family: forma-djr-deck, sans-serif;
+        font-size: 1.5em;
+    }
+
+    .topdesk-navlink {
+        color: var(--grey);
+        margin-left: 1em;
+    }
+
+    /* DESKTOP TOP SECONDARY NAVIGATION (Igor) */
+    
+    .snd-desknav {
+        margin-top: 7em;
+        margin-bottom: 2em;
+        display: flex;
+        justify-content: center;
+    }
+
+    .snd-desknav-cont {
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+    }
+
+    .snd-desknav-single-cont {
+        text-align: center;
+        width: 9em;
+    }
+
+    .snd-desknav-link {
+        font-family: forma-djr-deck, sans-serif;
+        font-size: 1.2em;
+        border: solid var(--darkblue);
+        color: var(--grey);
+        background-color: var(--lightblue);
+        border-radius: 25px;
+        padding: 0.5em 1em;
+    }
 }
 
 

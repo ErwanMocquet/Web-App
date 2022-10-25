@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function TopNav() {
     return (
-        <div className="topnav">
+        <div className="topnav mobile">
             <div className="topnav-cont">
                 <div className="topnav-singleitem-cont">
                     <NavLink to="/current" className="topnav-link" activeclassname="active">Current</NavLink>

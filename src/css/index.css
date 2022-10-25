@@ -212,8 +212,8 @@ body{
     width: 15em;
 }
 
-/* PROFILE PAGE MOBILE VERSION (Magdanela) */
- .profile-page {
+/* PROFILE PAGE MOBILE VERSION (Magdalena) */
+.profile-page {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -223,6 +223,7 @@ body{
     margin: 10px;
     font-size: 1.1em;
     font-family: forma-djr-text, sans-serif;
+
  }
 
  .settings-icon-outer {
@@ -250,12 +251,12 @@ body{
     margin: 0.5em 0.5em 0.5em; 
 }
 
-.profile-image {
-    margin: 1em 0em 1.5em 1.5em;
-}
-
 .profile-section-line {
     width: 90%;
+}
+
+.profile-image {
+    margin: 1em 0em 1.5em 1.5em;
 }
 
 .profile-statistics {
@@ -263,10 +264,9 @@ body{
 }
 
 .profile-statistics-stats-outer h1 {
- font-size: 1.2em;
- margin-top: 15px;
- margin-bottom: 15px;
-
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .profile-statistics-stats {
@@ -275,27 +275,27 @@ body{
 }
 
 .profile-statistics-badges {
-    display: flex;
     margin-top: 20px;
+    display: flex;
     gap: 26px;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-content: stretch;
-    flex-wrap: wrap;
-
 }
 
-
 .profile-statistics-badges > div > img {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 .profile-history {
-    width: 90%;
     margin-top: 15px;
-
+    width: 90%;
 }
+
+
+    
 
 .profile-history-cards-outer {
     width: 100%;
@@ -309,10 +309,13 @@ body{
 }
 
 .profile-history-card {
-    width: 100px;
-    height: 150px;
-    background: blue;
+    
+    
+}
 
+.profile-statistics-badges > div {
+    width: 60px;
+    height: 60px;
 }
 
 .profile-statistics-stats .left,
@@ -345,6 +348,90 @@ body{
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;  
+}
+/* FOLLOWING PAGE (MAGDALENA) */
+.following-back-outer {
+    display: flex;
+    gap: 35px;
+    width: 500px;
+    justify-content: space-between;
+    
+}
+
+/* SETTINGS STYLE (MAGDALENA) */
+.settings-main {
+    font-family: forma-djr-text, sans-serif;
+}
+
+.settings-holder {
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    row-gap: 35px;
+}
+
+.settings-main .back-button-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.settings-main .back-button-container, .settings-item {
+    max-width: 500px; /* looks better on desktop */
+}
+
+.settings-item {
+    color: white;
+    display: flex;
+}
+
+.settings-item-icon {
+    width:50px;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-right: 15px;
+}
+
+.settings-item-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.settings-item-action {
+    padding-left: 15px;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.settings-item-text {
+    width: 280px
+}
+
+.settings-item-text h2 {
+    font-size: 1.2rem;
+}
+
+/* BACK BUTTON */
+.button-back {
+    border-radius: 20px;
+    background-color: var(--peach);
+    color: var(--darkblue);
+    font-family: forma-djr-text, sans-serif;
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    font-size: 1.2rem;
 }
 
 /* CURRENT PAGE STYLING (ERWAN) */
@@ -449,6 +536,39 @@ body{
     font-size: 1.5rem;
 }
 
+/* DESCRIPTION PAGE (KATE) */
+.background1 {
+    background-color: var(--darkblue);
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.background2 {
+    background-color: var(--darkblue);
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.background3 {
+    background-color: var(--darkblue);
+    padding-bottom: 25%;
+    padding-top: 5%;
+}
+
+.header-description {
+    font-family: forma-djr-deck, sans-serif;
+    color: #e2e2e2;
+    padding-top: 10%;
+    font-size: 1.5rem;
+    padding-left: 5%;
+}
+
+.text-description {
+    font-family: forma-djr-text, sans-serif;
+    color: #e2e2e2;
+    padding-left: 5%;
+}
+
 /* Desktop invisible (Igor) */
 
 .landingpage-left {
@@ -541,4 +661,14 @@ body{
         cursor: pointer;
     }
     /* end of landing and login pages */
+
+    /* EXPLORE PAGE DESKTOP (Igor) */
+
+    .search-form, .search-input {
+        width: 30%;
+    }
+    
+    .cards-container::-webkit-scrollbar {
+        display: none;
+    }
 }

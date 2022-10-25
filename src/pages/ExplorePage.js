@@ -1,14 +1,32 @@
 /* So far made by Katie */
-import ExploreCards from "../components/ExploreCards.js"
-import BottomNav from "../components/BottomNav"
+import ExploreCards from "../components/ExploreCards.js";
+import BottomNav from "../components/BottomNav";
 import TuneIcon from '@mui/icons-material/Tune';
+import Footer from "../components/Footer.js";
+import TopDeskNav from "../components/TopDeskNav.js";
+import { useState, useEffect } from "react";
 
 export default function CurrentPage () {
+
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        async function getData() {
+            const response = await fetch("https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/series.json");
+            const data = await response.json();
+            setPosts(data);
+        }
+        getData();
+        console.log(getData())
+    }, []);
+
+
     return (
-        <main>
+        <main className="explore-main">
+            <TopDeskNav />
             <div className="search-container">
                 <form className="search-form">
-                    <input type="search" className="search-input" placeholder="Search..."/>
+                    <input type="search" className="search-input" placeholder="Search"/>
                     <button type="submit" className="search-button">Search</button>
                 </form>
                 <TuneIcon className="filter-icon" sx={{ fontSize: "2.5rem" }}/>
@@ -43,6 +61,7 @@ export default function CurrentPage () {
                 </div>
             </div>
             <BottomNav/>
+            <Footer />
         </main>
     )
 }
