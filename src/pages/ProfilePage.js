@@ -12,9 +12,10 @@ import HistoryCard from "../components/HistoryCards.js";
 
 export default function ProfilePage() {
   return (
-    <section>
+    <section className="profile-page-container">
       <TopDeskNav />
-      <div className="settings-icon-outer">
+
+      <div className="settings-icon-outer setting-icon-mobile">
         <div className="settings-icon">
           <NavLink to="/settings">
             <SettingsIcon />
@@ -23,7 +24,11 @@ export default function ProfilePage() {
       </div>
 
       <div className="profile-page">
+
+      
+
         <div className="profile-image">
+
           <img src={KateProfile} alt="profile" />
         </div>
 

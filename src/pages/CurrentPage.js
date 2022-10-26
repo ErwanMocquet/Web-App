@@ -12,15 +12,25 @@ export default function CurrentPage () {
             <TopNav />
             <TopDeskNav />
             <BottomNav />
+            <SecondDeskNav />
             <div className="current-main">
-                <SecondDeskNav />
                 <h1 className="first-heading-current">Currently Watching</h1>
-                <Link to="/description"><Cards /></Link>
+                <div className="container-desktop-current-cards">
+                    <Link to="/description"><Cards /></Link>
+                    <Link to="/description"><Cards /></Link>
+                </div>
                 <h1 className="heading-current">Not watched for a while</h1>
-                <Cards />
+                <div className="container-desktop-current-cards">
+                    <Link to="/description"><Cards /></Link>
+                    <Link to="/description"><Cards /></Link>
+                    <Link to="/description"><Cards /></Link>
+                    <Link to="/description"><Cards /></Link>
+                </div>
                 <h1 className="heading-current">Stopped</h1>
-                <Cards />
-                <Cards />
+                <div className="container-desktop-current-cards">
+                    <Link to="/description"><Cards /></Link>
+                    <Link to="/description"><Cards /></Link>
+                </div>
             </div>
             <Footer />
         </div>

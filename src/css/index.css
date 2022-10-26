@@ -226,6 +226,8 @@ body{
 
  }
 
+ 
+
  .settings-icon-outer {
     position: absolute;
     right: 0;
@@ -306,11 +308,6 @@ body{
     display: flex;
     width: fit-content;
     gap: 20px;
-}
-
-.profile-history-card {
-    
-    
 }
 
 .profile-statistics-badges > div {
@@ -512,6 +509,10 @@ body{
     flex-direction: row;
     overflow-y: scroll;
     padding-bottom: 5%;
+}
+
+.seriesrow {
+    display: flex;
 }
 
 .for-you-main {

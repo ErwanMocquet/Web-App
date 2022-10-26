@@ -234,9 +234,8 @@
     background-color: var(--grey);
     border-radius: 20px;
     width: 45%;
-    margin-left: 5%;
-    margin-top: 5%;
-    margin-right: 5%;
+    margin-top: 2em;
+    margin-right: 3em;
 }
 
 .image-explore-cards-container{
@@ -603,6 +602,87 @@
         border-radius: 25px;
         padding: 0.5em 1em;
     }
+
+    /* CARDS ON CURRENTS (ERWAN) */
+
+    .current-main{
+        margin: 0 20%;
+    }
+
+    .card-container{
+        width: 60%;
+        grid-template-columns: none;
+        grid-template-rows: 0.8fr 0.2fr;
+        margin: 3rem 0;
+    }
+
+    .image-cards-container{
+        border-radius: 20px 20px 0 0;
+        height: 8rem;
+    }
+
+    .image-cards{
+        width: 100%;
+        right: 0;
+    }
+
+    .card-gradient:after{
+        display: none;
+    }
+
+    .add-series-arrow-container{
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        bottom: 4%;
+        right: 4%;
+    }
+
+    .container-desktop-current-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-gradient{
+        height: 8rem;
+    }
+
+    /* CARDS ON UPCOMING AND WISHLIST (ERWAN) */
+
+    .upcoming-main{
+        margin: 0 20%;
+    }
+
+    .wishlist-main{
+        margin: 0 20%;
+    }
+
+    .card-container-upcoming{
+        width: 60%;
+        grid-template-columns: none;
+        grid-template-rows: 0.8fr 0.2fr;
+        margin: 4rem 0;
+    }
+
+    .upcoming-image-cards-container{
+        border-radius: 20px 20px 0 0;
+        height: 8rem;
+    }
+
+    .image-cards-upcoming{
+        width: 100%;
+        right: 0;
+    }
+
+    .upcoming-card-gradient:after{
+        display: none;
+    }
+
+    .upcoming-card-gradient{
+        height: 8rem;
+    }
 }
+
+
 
 

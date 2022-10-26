@@ -11,9 +11,12 @@ export default function WishlistPage () {
             <TopDeskNav />
             <TopNav />
             <BottomNav />
+            <SecondDeskNav />
             <div className="wishlist-main">
-                <SecondDeskNav />
-                <Cards />
+                <div className="container-desktop-current-cards">
+                    <Cards />
+                    <Cards />
+                </div>
             </div>
             <Footer />
         </div>

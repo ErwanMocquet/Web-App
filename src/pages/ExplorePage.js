@@ -7,19 +7,28 @@ import TopDeskNav from "../components/TopDeskNav.js";
 import { useState, useEffect } from "react";
 
 export default function CurrentPage () {
-
-    const [posts, setPosts] = useState([]);
-
+    const [series, setSeries] = useState([]);
+    const [isSeries, setIsSeries] = useState(true);
+  
     useEffect(() => {
-        async function getData() {
-            const response = await fetch("https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/series.json");
+        async function getSeries() {
+            const url = "https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/series.json";
+            const response = await fetch(url);
             const data = await response.json();
-            setPosts(data);
+            if (data !== null) {
+                const seriesArray = Object.keys(data).map((key) => ({
+                id: key,
+                ...data[key],
+                }));
+                setSeries(seriesArray);
+            } else {
+                setIsSeries(false);
+            }
         }
-        getData();
-        console.log(getData())
+        getSeries();
     }, []);
 
+    console.log(series)
 
     return (
         <main className="explore-main">
@@ -34,30 +43,27 @@ export default function CurrentPage () {
             <div className="for-you-main">
                 <h1 className="explore-heading-one">For you</h1>
                 <div className="cards-container">
-                    <ExploreCards />
-                    <ExploreCards />
-                    <ExploreCards />
-                    <ExploreCards />
-                    <ExploreCards />
-                    <ExploreCards />
+                    {isSeries ? (
+                        <div className="seriesrow">
+                            {series.map((post) => (
+                                <ExploreCards key={post.id} post={post} />
+                            ))}
+                        </div>
+                    ) : (
+                    <p>No series to show</p>
+                    )}
                 </div>
             </div>
             <div className="trending-main">
                 <h1 className="explore-heading-one">Trending</h1>
                 <div className="cards-container">
-                    <ExploreCards />
-                    <ExploreCards />
-                    <ExploreCards />
+                    
                 </div>
             </div>
             <div className="themes-main">
                 <h1 className="explore-heading-one">Themes</h1>
                 <div className="cards-container">
-                    <ExploreCards />
-                    <ExploreCards />
-                    <ExploreCards />
-                    <ExploreCards />
-                    <ExploreCards />
+                    
                 </div>
             </div>
             <BottomNav/>

@@ -11,9 +11,12 @@ export default function UpcomingPage () {
             <TopDeskNav />
             <TopNav />
             <BottomNav />
+            <SecondDeskNav />
             <div className="upcoming-main">
-                <SecondDeskNav />
-                <Cards />
+                <div className="container-desktop-current-cards">
+                    <Cards />
+                    <Cards />
+                </div>
             </div>
             <Footer />
         </div>
