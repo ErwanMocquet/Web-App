@@ -81,18 +81,18 @@ body{
 
 .text-landing-container{
     text-align: center;
-    margin: 15% 1em 0 1em
+    margin: 15% 0 5% 0;
 
 }
 
 .text-landing{
     color: var(--grey);
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: forma-djr-deck, sans-serif;
 }
 
 .button-landing-container{
-    margin-top: 15%;
+    margin-top: 10%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -104,13 +104,19 @@ body{
     display: block;
     width: 12rem;
     height: 3rem;
-    border-radius: 20px;
+    border-radius: 25px;
     border: none;
     background-color: var(--peach);
     font-family: forma-djr-text, sans-serif;
     font-size: 2rem;
     cursor: pointer;
     color: var(--darkblue);
+}
+
+.bl-two {
+    background-color: var(--darkblue);
+    border: solid var(--peach);
+    color: var(--peach);
 }
 
 /* LOGIN PAGE MOBILE VERSION (Erwan) */
@@ -206,8 +212,8 @@ body{
     width: 15em;
 }
 
-/* PROFILE PAGE MOBILE VERSION (Magdanela) */
- .profile-page {
+/* PROFILE PAGE MOBILE VERSION (Magdalena) */
+.profile-page {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -245,12 +251,12 @@ body{
     margin: 0.5em 0.5em 0.5em; 
 }
 
-.profile-image {
-    margin: 1em 0em 1.5em 1.5em;
-}
-
 .profile-section-line {
     width: 90%;
+}
+
+.profile-image {
+    margin: 1em 0em 1.5em 1.5em;
 }
 
 .profile-statistics {
@@ -258,10 +264,9 @@ body{
 }
 
 .profile-statistics-stats-outer h1 {
- font-size: 1.2em;
- margin-top: 15px;
- margin-bottom: 15px;
-
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .profile-statistics-stats {
@@ -270,27 +275,27 @@ body{
 }
 
 .profile-statistics-badges {
-    display: flex;
     margin-top: 20px;
+    display: flex;
     gap: 26px;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-content: stretch;
-    flex-wrap: wrap;
-
 }
 
-
 .profile-statistics-badges > div > img {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 .profile-history {
-    width: 90%;
     margin-top: 15px;
-
+    width: 90%;
 }
+
+
+    
 
 .profile-history-cards-outer {
     width: 100%;
@@ -303,11 +308,9 @@ body{
     gap: 20px;
 }
 
-.profile-history-card {
-    width: 100px;
-    height: 150px;
-    background: blue;
-
+.profile-statistics-badges > div {
+    width: 60px;
+    height: 60px;
 }
 
 .profile-statistics-stats .left,
@@ -341,6 +344,90 @@ body{
 	cursor: pointer;
 	outline: inherit;  
 }
+/* FOLLOWING PAGE (MAGDALENA) */
+.following-back-outer {
+    display: flex;
+    gap: 35px;
+    width: 500px;
+    justify-content: space-between;
+    
+}
+
+/* SETTINGS STYLE (MAGDALENA) */
+.settings-main {
+    font-family: forma-djr-text, sans-serif;
+}
+
+.settings-holder {
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    row-gap: 35px;
+}
+
+.settings-main .back-button-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.settings-main .back-button-container, .settings-item {
+    max-width: 500px; /* looks better on desktop */
+}
+
+.settings-item {
+    color: white;
+    display: flex;
+}
+
+.settings-item-icon {
+    width:50px;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding-right: 15px;
+}
+
+.settings-item-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.settings-item-action {
+    padding-left: 15px;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.settings-item-text {
+    width: 280px
+}
+
+.settings-item-text h2 {
+    font-size: 1.2rem;
+}
+
+/* BACK BUTTON */
+.button-back {
+    border-radius: 20px;
+    background-color: var(--peach);
+    color: var(--darkblue);
+    font-family: forma-djr-text, sans-serif;
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    font-size: 1.2rem;
+}
 
 /* CURRENT PAGE STYLING (ERWAN) */
 
@@ -358,7 +445,74 @@ body{
     margin: 2rem 0 2rem 2rem
 }
 
-/* EXLORE PAGE STYLING */
+.current-main {
+    padding-bottom: 13%;
+}
+
+/* EXLORE PAGE STYLING (KATE) */
+.search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.search-form {
+    margin-top: 5%;
+    margin-left: 3%;
+    background-color: var(--grey);
+    border-radius: 20px;
+    height: 2.5rem;
+    outline: none;
+    font-size: 1.2rem;
+    font-family: forma-djr-text, sans-serif;
+    display: flex;
+    width: 75%;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    margin-right: 20%;
+}
+
+.search-button {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 40px;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+.search-button:hover {
+    opacity: 1
+}
+
+.search-button:focus,
+.search-input:focus {
+  outline: none;
+}
+
+.filter-icon {
+    color: var(--grey);
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    overflow-y: scroll;
+    padding-bottom: 5%;
+}
+
 .for-you-main {
     margin-top: 2rem;
     margin-left: 2rem;
@@ -379,4 +533,185 @@ body{
     font-family: forma-djr-text, sans-serif;
     color: #e2e2e2;
     font-size: 1.5rem;
+}
+
+/* DESCRIPTION PAGE (KATE) */
+.background1 {
+    background-color: var(--darkblue);
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.background2 {
+    background-color: var(--darkblue);
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.background3 {
+    background-color: var(--darkblue);
+    padding-bottom: 25%;
+    padding-top: 5%;
+}
+
+.header-description {
+    font-family: forma-djr-deck, sans-serif;
+    color: #e2e2e2;
+    padding-top: 10%;
+    font-size: 1.5rem;
+    padding-left: 5%;
+}
+
+.text-description {
+    font-family: forma-djr-text, sans-serif;
+    color: #e2e2e2;
+    padding-left: 5%;
+}
+
+/* Desktop invisible (Igor) */
+
+.landingpage-left {
+    display: none;
+}
+
+/* IMPORTANT */
+/* ! ! ! ! ! DESKTOP VERSIONS ! ! ! ! ! */
+
+@media only screen and (min-width: 1000px) {
+
+    .mobile {
+        display: none;
+    }
+
+    /* LANDING PAGE + LOGIN PAGE + SIGNUP PAGE (Igor & Kate) */
+    .landingpage-left {
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        background-image: url('../img/seriesbackground.png');
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .landingpage-right, .loginpage-right, .signuppage-right {
+        width: 45%;
+    }
+
+    .landing-main, .loginpage-main, .signuppage-main {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .landing-welcome-heading {
+        color: var(--grey);
+        font-family: forma-djr-text, sans-serif;
+        font-size: 3em;
+    }
+
+    .text-landing-container {
+        margin: 0;
+    }
+
+    .landing-welcome-heading {
+        font-size: 7rem;
+    }
+
+    .logo-landing {
+        width: 50rem;
+    }
+
+    .button-landing-container {
+        margin-top: 15%;
+    }
+
+    .button-landing {
+        border-radius: 50px;
+        width: 15rem;
+        height: 5rem;
+        font-size: 3rem;
+    }
+
+    .bl-one:hover {
+        transition: 1s;
+        border: solid var(--peach);
+        color: var(--peach);
+        background-color: var(--darkblue);
+    }
+
+    .bl-two:hover {
+        transition: 1s;
+        border: solid var(--darkblue);
+        color: var(--darkblue);
+        background-color: var(--peach);
+    }
+
+    .landing-welcome-cont, .landing-welcome-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .landing-welcome-cont {
+        margin-bottom: 2em;
+    }
+
+    .photo-signup-container {
+        width: 9em;
+        height: 9em;
+        margin-top: 5%;
+    }
+
+    .input-login-container {
+        margin-top: 8%;
+        margin-left: 30%;
+    }
+
+    .input-label {
+        font-size: 2rem;
+    }
+
+    .input-field {
+        height: 3.5rem;
+        width: 140%;
+    }
+
+    .button-next-beginning {
+        cursor: pointer;
+        width: 6rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .welcome-logo {
+        width: 20rem;
+    }
+    /* end of landing and login/signup pages */
+
+    /* CURRENT PAGE DESKTOP (KATE) */
+    .current-main {
+        text-align: center;
+    }
+
+    .current-cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .current-cards-couple{
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* EXPLORE PAGE DESKTOP (Igor) */
+
+    .search-form, .search-input {
+        width: 30%;
+    }
+    
+    .cards-container::-webkit-scrollbar {
+        display: none;
+    }
 }

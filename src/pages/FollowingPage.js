@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import SettingsIcon from "@mui/icons-material/Settings";
 import KateProfile from "../img/karuno.svg";
 import BottomNav from "../components/BottomNav";
+import TuneIcon from '@mui/icons-material/Tune';
 
 export default function ProfilePage() {
   return (
@@ -42,12 +43,26 @@ export default function ProfilePage() {
 
         <hr className="profile-section-line" />
                 
+
+         <div className="following-back-outer">   
+        <div className="profile-statistics-stats-outer">
+            <h1> Following </h1>
+            </div>
+
                 <div className="back-button-container">
                     <Link to="/profile">
                         <button type="button" className="button-back">BACK</button>
                     </Link>
                 </div>
+            </div>  
 
+                <div className="search-container">
+                <form className="search-form">
+                    <input type="search" className="search-input" placeholder="Search..."/>
+                    <button type="submit" className="search-button">Search</button>
+                </form>
+                <TuneIcon className="filter-icon" sx={{ fontSize: "2.5rem" }}/>
+            </div>
     
     </div>
 </section>
