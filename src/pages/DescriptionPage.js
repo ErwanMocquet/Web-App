@@ -5,31 +5,58 @@ import Episodes from "../components/Episodes";
 import Actor from "../components/Actor";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer.js";
+import TopDeskNav from "../components/TopDeskNav.js";
 
 export default function DescriptionPage() {
     return (
         <section>
+            <TopDeskNav />
             <div className="back-button-container">
                 <Link to="/current"><ArrowBackIosNewIcon className="back-button" sx={{ fontSize: "2.5rem" }}/></Link>
             </div>
             <DescriptionTop/>
-            <div className="background1">
+            <div className="background1 mobile">
                 <h1 className="header-description">Rating: 86%</h1>
                 <p className="text-description">Imported from Rotten tomato</p>
             </div>
             <div className="background2">
                 <h1 className="header-description">Season 1 (2022)</h1>
-                <Episodes/>
-                <Episodes/>
-                <Episodes/>
+                <div className="episodes-cards-container">
+                    <div>
+                        <Episodes/>
+                        <Episodes/>
+                        <Episodes/>
+                    </div>
+                    <div className="desktop-only">
+                        <Episodes/>
+                        <Episodes/>
+                        <Episodes/>
+                    </div>
+                </div>
             </div>
             <div className="background3">
                 <h1 className="header-description">Cast:</h1>
-                <Actor/>
-                <Actor/>
-                <Actor/>
+                <div className="actors-content">
+                    <div>
+                        <Actor/>
+                        <Actor/>
+                        <Actor/>
+                    </div>
+                    <div className="desktop-only">
+                        <Actor/>
+                        <Actor/>
+                        <Actor/>
+                    </div>
+                    <div className="desktop-only">
+                        <Actor/>
+                        <Actor/>
+                        <Actor/>
+                    </div>
+                </div>
             </div>
             <BottomNav/>
+            <Footer />
         </section>
     )
 }

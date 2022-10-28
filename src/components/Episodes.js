@@ -11,8 +11,11 @@ export default function Episodes() {
                 <h2 className="episode-name">1. Shadow of the path</h2>
                 <p className="episode-time">1hr 5min</p>
             </article>
-            <div className="add-episode">
+            <div className="add-episode mobile">
                 <AddIcon className="add-episode-button"/>
+            </div>
+            <div className="add-episode desktop-plus-button">
+                <AddIcon className="add-episode-button" sx={{ fontSize: "2.5rem" }}/>
             </div>
         </section>
     )

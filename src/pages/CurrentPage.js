@@ -1,12 +1,35 @@
 import Cards from "../components/CurrentCards.js";
 import BottomNav from "../components/BottomNav";
 import TopNav from "../components/TopNav";
-import {Link} from "react-router-dom";
 import Footer from "../components/Footer.js";
 import TopDeskNav from "../components/TopDeskNav.js";
 import SecondDeskNav from "../components/SecondDeskNav.js";
+import { useEffect, useState } from "react";
 
 export default function CurrentPage () {
+
+    const [posts, setPosts] = useState([]);
+    const [isPosts, setIsPosts] = useState(true);
+  
+    useEffect(() => {
+        async function getPosts() {
+        const url =
+        "https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/current.json";
+        const response = await fetch(url);
+        const data = await response.json();
+        if (data !== null) {
+            const postsArray = Object.keys(data).map((key) => ({
+            id: key,
+            ...data[key],
+            }));
+            setPosts(postsArray);
+        } else {
+            setIsPosts(false);
+        }
+        }
+        getPosts();
+    }, []);
+
     return (
         <div>
             <TopNav />
@@ -16,20 +39,21 @@ export default function CurrentPage () {
             <div className="current-main">
                 <h1 className="first-heading-current">Currently Watching</h1>
                 <div className="container-desktop-current-cards">
-                    <Link to="/description"><Cards /></Link>
-                    <Link to="/description"><Cards /></Link>
+                {isPosts ? (
+                    <div className="currentbox">
+                        {posts.map((post) => (
+                            <Cards key={post.id} post={post} />
+                        ))}
+                    </div>
+                ) : (
+                    <p>Nothing to show</p>
+                )}
                 </div>
                 <h1 className="heading-current">Not watched for a while</h1>
                 <div className="container-desktop-current-cards">
-                    <Link to="/description"><Cards /></Link>
-                    <Link to="/description"><Cards /></Link>
-                    <Link to="/description"><Cards /></Link>
-                    <Link to="/description"><Cards /></Link>
                 </div>
                 <h1 className="heading-current">Stopped</h1>
                 <div className="container-desktop-current-cards">
-                    <Link to="/description"><Cards /></Link>
-                    <Link to="/description"><Cards /></Link>
                 </div>
             </div>
             <Footer />

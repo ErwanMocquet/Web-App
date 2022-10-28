@@ -9,7 +9,7 @@
 .continue-with-container{
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .continue-text{
@@ -81,6 +81,11 @@
 .main-card{
     display: flex;
     justify-content: center;
+    margin-bottom: 13%;
+}
+
+.container-desktop-current-cards {
+    padding-bottom: 7%;
 }
 
 .card-container{
@@ -228,36 +233,28 @@
 
 .explore-card-container {
     display: grid;
-    grid-template-rows: 1.8fr 2fr 0.3fr;
+    grid-template-rows: 1fr 2fr 0.3fr;
     position: relative;
     text-align: center;
     background-color: var(--grey);
     border-radius: 20px;
-    width: 45%;
+    width: 9.6rem;
+    height: 26rem;
     margin-top: 2em;
-    margin-right: 3em;
+    margin-right: 2em;
+    margin-left: 1em;
 }
 
 .image-explore-cards-container{
     width: 9.6rem;
+    height: 10rem;
     overflow: hidden;
     border-radius: 20px 20px 0 0px;
 }
 
 .explore-card-gradient {
-    position: relative;
-    z-index: 1;
     height: 8.1rem;
 }
-
-.explore-card-gradient:after {
-    content: '';
-    background: linear-gradient(to bottom, transparent, 70%, var(--grey));
-    position: absolute;
-    top: 0; left: 0;
-    height: 100%;
-    width: 100%;
-} 
 
 .image-explore-cards{
     width: 150%;
@@ -282,6 +279,11 @@
 .explore-content-container {
     text-align: left;
     margin-left: 0.7rem;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5%;
 }
 
 .explore-title-content-card {
@@ -293,10 +295,12 @@
 .explore-content-card{
     font-size: 0.9rem;
     font-family: forma-djr-text, sans-serif;
+    padding-right: 5%;
 }
 
 .platform-icons {
     width: 25%;
+    margin-top: 6%;
 }
 
 .plus-button-container{
@@ -305,17 +309,58 @@
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
-    bottom: -3%;
+    bottom: -2%;
     left: 37%;
     z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .plus-button{
     color: var(--grey);
 }
 
+/* AddButton (Igor) */
+.modalbox {
+    font-family: forma-djr-deck, sans-serif;
+}
+
+.modalbox-title {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.modalbox-button-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.modalbox-button {
+    margin-bottom: 0.5em;
+    font-size: 1.4em;
+    font-family: forma-djr-deck, sans-serif;
+    width: 8em;
+    border-radius: 25px;
+}
+
 /* DESCRIPTION COMPONENTS (KATE) */
 /* THE TOP (KATE) */
+.desktop-only {
+    display: none;
+}
+
+.desktop-top-card{
+    display: none;
+}
+
+.description-top {
+    display: block;
+}
+
 .description-image {
     width: 100%;
     position: fixed;
@@ -421,6 +466,10 @@
 .add-episode-button {
     color: var(--grey);
 }
+
+.desktop-plus-button {
+    display: none;
+}
 /* THE ACTOR (KATE) */
 .actor-container {
     padding-top: 5%;
@@ -509,7 +558,8 @@
     /* FOOTER STYLING (Igor) */
 
     .footer-main {
-        margin-top: 4em;
+        padding-top: 4em;
+        background-color: var(--darkblue);
     }
 
     .footer-logo-cont {
@@ -522,7 +572,7 @@
     .footer-links-cont {
         display: flex;
         justify-content: space-around;
-        margin: 2em 20%;
+        padding: 2em 20%;
         font-family: forma-djr-text, sans-serif;
         font-size: 1.3em;
     }
@@ -603,6 +653,12 @@
         padding: 0.5em 1em;
     }
 
+    /* DESKTOP CONTINUE WITH (Kate) */
+
+    .continue-text {
+        font-size: 2rem;
+    }
+
     /* CARDS ON CURRENTS (ERWAN) */
 
     .current-main{
@@ -680,6 +736,126 @@
 
     .upcoming-card-gradient{
         height: 8rem;
+    }
+
+    /* DESCRIPTION TOP (KATIE) */
+    .desktop-top-card-container {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--grey);
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .description-image-container{
+        height: 25rem;
+        width: 60%;
+        overflow: hidden;
+        border-radius: 20px 0 0 20px;
+    }
+    
+    .desktop-description-image {
+        width: 100%;
+        position: relative;
+        bottom: 110%;
+    }
+
+    .desktop-text-container{
+        margin-top: 5%;
+    }
+
+    .desktop-description-header {
+        font-family: forma-djr-deck, sans-serif;
+        font-size: 2.5rem;
+        padding-left: 5%;
+        padding-bottom: 7%;
+    }
+
+    .desktop-description-text {
+        font-family: forma-djr-text, sans-serif;
+        font-size: 1.5rem;
+        padding-left: 5%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+    }
+    /* DESCRIPTION episodes (KATIE) */
+    .mobile {
+        display: none;
+    }
+
+    .desktop-only {
+        display: block
+    }
+
+    .background2{
+        background-color: transparent;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .episodes-cards-container{
+        display: flex;
+        flex-direction: row;
+        margin-left: 3%;
+        margin-right: 2%;
+    }
+
+    .header-description {
+        font-size: 2.7rem;
+        padding-bottom: 2%;
+    }
+
+    .image-episode-card {
+        height: 8rem;
+    }
+
+    .episode-name {
+        font-size: 1.4rem;
+        padding-top: 10%;
+    }
+    
+    .episode-time {
+        font-size: 1.2rem;
+        padding-top: 7%;
+    }
+    
+    .add-episode {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-top: 100%;
+    }
+
+    .background3{
+        background-color: transparent;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    /* DESCRIPTION actors (KATIE) */
+    .actors-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .actor-container {
+        padding-top: 3%;
+    }
+
+    .actor-content {
+        margin-bottom: 6%;
+    }
+
+    .actor-name {
+        font-size: 2rem;
+        padding-top: 2%;
+    }
+
+    .desktop-plus-button {
+        display: block;
     }
 }
 

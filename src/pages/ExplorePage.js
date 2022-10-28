@@ -1,4 +1,4 @@
-/* So far made by Katie */
+/* So far made by Katie and Igor */
 import ExploreCards from "../components/ExploreCards.js";
 import BottomNav from "../components/BottomNav";
 import TuneIcon from '@mui/icons-material/Tune';
@@ -57,13 +57,29 @@ export default function CurrentPage () {
             <div className="trending-main">
                 <h1 className="explore-heading-one">Trending</h1>
                 <div className="cards-container">
-                    
+                    {isSeries ? (
+                        <div className="seriesrow">
+                            {series.map((post) => (
+                                <ExploreCards key={post.id} post={post} />
+                            ))}
+                        </div>
+                    ) : (
+                    <p>No series to show</p>
+                    )}
                 </div>
             </div>
             <div className="themes-main">
                 <h1 className="explore-heading-one">Themes</h1>
                 <div className="cards-container">
-                    
+                    {isSeries ? (
+                        <div className="seriesrow">
+                            {series.map((post) => (
+                                <ExploreCards key={post.id} post={post} />
+                            ))}
+                        </div>
+                    ) : (
+                    <p>No series to show</p>
+                    )}
                 </div>
             </div>
             <BottomNav/>

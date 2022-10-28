@@ -1,10 +1,28 @@
 /* MADE BY ERWAN */
-import barbarians from "../img/barbarians.jpg";
-import netflix from "../img/netflix-icon.png"
 import AddIcon from '@mui/icons-material/Add';
-import KateProfile from "../img/karuno.svg"
+import KateProfile from "../img/karuno.svg";
+import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
-export default function WishlistPage() {
+export default function WishlistCard({ post }) {
+    const [card, setCard] = useState([])
+
+    useEffect(() => {
+        if (post) {
+            setCard(post);
+        }
+    }, [post]);
+
+    async function addCurrent() {
+        const url = "https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/current.json";
+        const response = await fetch(url, {
+            method: "POST", 
+            body: JSON.stringify(card) 
+        });
+        const data = await response.json();
+        console.log(data);
+        alert("Added to Current");
+    }
 
     return(
         <main className="main-card">
@@ -13,21 +31,25 @@ export default function WishlistPage() {
                 <img className="profile-cards" src={KateProfile} alt="Follower's profile"></img>
                 <img className="profile-cards" src={KateProfile} alt="Follower's profile"></img>
             </div>
+            <Link to="/description">
             <figure className="image-cards-container">
                 <div className="card-gradient">
-                    <img className="image-cards" src={barbarians} alt="Barbarians season 2"></img>
+                    <img className="image-cards" src={post.image_thumbnail_path} alt="Barbarians season 2"></img>
                 </div>
             </figure>
+            </Link>
+            <Link to="/description">
             <article className="content-container">
-                <h1 className="text-cards title-content-card">Series Name</h1>
-                <h2 className="text-cards whereat-content-card">2 seasons</h2>
-                <p className="text-cards description-content-card">This is a small description of the episode and what's happening in it.</p>
+                <h1 className="text-cards title-content-card">{post.name}</h1>
+                <h2 className="text-cards whereat-content-card">{post.seasnum} season</h2>
+                <p className="text-cards description-content-card">{post.lastepisode}</p>
                 <div className="platform-cards-container">
-                    <img className="platform-cards" src={netflix} alt="Netflix logo"></img>
+                    <img className="platform-cards" src={post.source} alt="Netflix logo"></img>
                 </div>
             </article>
+            </Link>
             <div className="add-series-arrow-container">
-                <AddIcon className="add-series-arrow"></AddIcon>
+                <button onClick={addCurrent}><AddIcon className="add-series-arrow"></AddIcon></button>
             </div>
         </section>
         </main>

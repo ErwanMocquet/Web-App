@@ -213,7 +213,8 @@ body{
 }
 
 /* PROFILE PAGE MOBILE VERSION (Magdalena) */
-.profile-page {
+.profile-page-left,
+.profile-page-right {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -223,10 +224,19 @@ body{
     margin: 10px;
     font-size: 1.1em;
     font-family: forma-djr-text, sans-serif;
-
  }
-
  
+ .left-on-desktop {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: var(--grey);
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.1em;
+    font-family: forma-djr-text, sans-serif;
+}
 
  .settings-icon-outer {
     position: absolute;
@@ -263,6 +273,7 @@ body{
 
 .profile-statistics {
     width: 90%;
+    margin: 0 auto;
 }
 
 .profile-statistics-stats-outer h1 {
@@ -301,7 +312,8 @@ body{
 
 .profile-history-cards-outer {
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden; /* no scroll on y-axis (up-down), only x-axis (left-right) */
+    overflow-x: scroll;
 }
 
 .profile-history-cards {
@@ -346,6 +358,52 @@ body{
 	cursor: pointer;
 	outline: inherit;  
 }
+
+@media only screen and (min-width: 1000px) {
+    .profile-page-container {
+            margin-top: 90px; /* to make space for top bar on desktop */
+    }
+    .profile-page-left {
+            width: 30%;
+            height: 100%;
+    }
+    
+    .profile-page-right {
+            width: 70%;
+    }
+    
+    .profile-page {
+            display: flex;
+    }
+    
+    .profile-bio-outer {
+            color: black;
+            border-radius: 10%;
+            background: white;
+            padding: 20px;
+            box-sizing: border-box;
+    }
+    
+    .follow-button {
+            color: black !important;
+    }
+    .profile-history-cards-outer {
+            width: 100%;
+            overflow: hidden; /* no scroll on desktop */
+    }
+    .profile-history-card {
+            max-width: 200px;
+    }
+    
+    .profile-history-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+            justify-content: space-around;
+    }
+}
+
 /* FOLLOWING PAGE (MAGDALENA) */
 .following-back-outer {
     display: flex;
@@ -356,6 +414,10 @@ body{
 }
 
 /* SETTINGS STYLE (MAGDALENA) */
+.settings-icon-desktop {
+    display: none;
+}
+
 .settings-main {
     font-family: forma-djr-text, sans-serif;
 }
@@ -437,14 +499,16 @@ body{
     font-family: forma-djr-text, sans-serif;
     color: #e2e2e2;
     font-size: 1.5rem;
-    margin: 0 0 2rem 2rem
+    margin-left: 5%;
+    margin-bottom: 5%;
 }
 
 .heading-current{
     font-family: forma-djr-text, sans-serif;
     color: #e2e2e2;
     font-size: 1.5rem;
-    margin: 2rem 0 2rem 2rem
+    margin-left: 5%;
+    margin-bottom: 5%;
 }
 
 /* EXLORE PAGE STYLING (KATE) */
@@ -452,6 +516,12 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--darkblue);
+    z-index: 9999;
+    padding-bottom: 1em;
 }
 
 .search-form {
@@ -537,6 +607,15 @@ body{
     font-size: 1.5rem;
 }
 
+.cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.cards-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
 /* DESCRIPTION PAGE (KATE) */
 .background1 {
     background-color: var(--darkblue);
@@ -570,6 +649,10 @@ body{
     padding-left: 5%;
 }
 
+.desktop-only {
+    display: none;
+}
+
 /* Desktop invisible (Igor) */
 
 .landingpage-left {
@@ -585,7 +668,7 @@ body{
         display: none;
     }
 
-    /* LANDING PAGE + LOGIN PAGE + SIGNUP PAGE (Igor) */
+    /* LANDING PAGE + LOGIN PAGE + SIGNUP PAGE (Igor & Kate) */
     .landingpage-left {
         display: flex;
         flex-direction: column;
@@ -615,6 +698,14 @@ body{
 
     .text-landing-container {
         margin: 0;
+    }
+
+    .landing-welcome-heading {
+        font-size: 5rem;
+    }
+
+    .logo-landing {
+        width: 35rem;
     }
 
     .button-landing {
@@ -649,17 +740,36 @@ body{
     }
 
     .photo-signup-container {
-        width: 10em;
-        height: 10em;
-        margin-top: 8%;
+        width: 9em;
+        height: 9em;
+        margin-top: 5%;
     }
 
     .input-login-container {
+        width: 20em;
+        display: flex;
+        justify-content: center;
         margin-top: 5%;
+    }
+
+    .input-label {
+        font-size: 1.5rem;
+    }
+
+    .input-field {
+        height: 3.5rem;
+        border-radius: 45px;
     }
 
     .button-next-beginning {
         cursor: pointer;
+        width: 6rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .welcome-logo {
+        width: 20rem;
     }
     /* end of landing and login pages */
 
@@ -672,4 +782,43 @@ body{
     .cards-container::-webkit-scrollbar {
         display: none;
     }
+
+    /* SETTINGS PAGE (MAGGIE) */
+    .settings-icon-mobile {
+        display: none;
+    }
+
+    .settings-icon-desktop {
+        display: block;
+    }
+
+    .settings-icon-outer {
+        position: relative;
+        padding: 0;
+        margin-left: auto; /* align to right side */
+        width: 30px;
+        height: 30px;
+        margin-bottom: -10px;
+    }
+
+    /* DESCRIPTION PAGE (KATE) */
+    .back-button-container {
+        margin-top: 7%;
+        margin-left: -3%;
+    }
+    .header-description {
+        padding-top: 5%;
+        font-size: 1.5rem;
+        padding-left: 5%;
+    }
+
+    .desktop-only {
+        display: block;
+    }
+
+    /* EXPLORE PAGE (KATE) */
+    .search-input {
+        margin-right: 60%;
+    }
+    
 }

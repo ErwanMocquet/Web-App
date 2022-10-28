@@ -1,11 +1,13 @@
 /* MADE BY KATIE, IGOR (data) */
-//import barbarians from "../img/barbarians.jpg";
-//import netflix from "../img/netflix-icon.png"
-import AddIcon from '@mui/icons-material/Add';
 import KateProfile from "../img/karuno.svg";
 import more from "../img/more.png";
+import AddButton from "./AddButton";
+import { Link } from "react-router-dom";
+
 
 export default function ExploreCards ({ post }) {
+
+
     return (
             <section className="explore-card-container">
                 <div className="explore-profile-cards-container">
@@ -13,22 +15,26 @@ export default function ExploreCards ({ post }) {
                     <img className="explore-profile-cards" src={KateProfile} alt="Follower's profile"></img>
                     <img className="explore-profile-cards" src={more} alt="Follower's profile"></img>
                 </div>
-                <figure className="image-explore-cards-container">
-                    <div className="explore-card-gradient">
-                        <img className="image-explore-cards" src={post.image_thumbnail_path} alt="Barbarians season 2"></img>
-                    </div>
-                </figure>
-                <article className="explore-content-container">
-                    <h1 className="explore-title-content-card">{post.name}</h1>
-                    <p className="explore-content-card">{post.overall}</p>
-                    <div>
-                        <img className="platform-icons" src={post.source} alt="Netflix logo"></img>
-                        <p></p>
-                    </div>
-                </article>
-            <div className="plus-button-container">
-                <AddIcon className="plus-button" sx={{ fontSize: "2.5rem" }}></AddIcon>
-            </div>
+                <Link to="/description">
+                    <figure className="image-explore-cards-container">
+                        <div className="explore-card-gradient">
+                            <img className="image-explore-cards" src={post.image_thumbnail_path} alt="Series"></img>
+                        </div>
+                    </figure>
+                </Link>
+                <Link to="/description">
+                    <article className="explore-content-container">
+                        <h1 className="explore-title-content-card">{post.name}</h1>
+                        <p className="explore-content-card">{post.overall}</p>
+                        <div>
+                            <img className="platform-icons" src={post.source} alt="Netflix logo"></img>
+                            <p></p>
+                        </div>
+                    </article>
+                </Link>
+                <div className="plus-button-container">
+                    <AddButton post={post} />
+                </div>
             </section>
     )
 }

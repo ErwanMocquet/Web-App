@@ -1,7 +1,7 @@
 /* MADE BY MAGDALENA */
 import BottomNav from "../components/BottomNav";
-import { Link, NavLink } from "react-router-dom";
-import SettingsIcon from "@mui/icons-material/Settings";
+import { Link } from "react-router-dom";
+//import SettingsIcon from "@mui/icons-material/Settings";
 import PersonIcon from '@mui/icons-material/Person';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
