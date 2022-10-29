@@ -6,6 +6,7 @@ import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import { useEffect, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const style = {
   position: 'absolute',
@@ -25,7 +26,6 @@ export default function AddButton({ post }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
   const [card, setCard] = useState([])
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function AddButton({ post }) {
       });
       const data = await response.json();
       console.log(data);
-      alert("Added to Wishlist");
+      toast.success('Successfully added!', {className: "toaster"})
   } 
 
   async function addCurrent() {
@@ -55,11 +55,15 @@ export default function AddButton({ post }) {
     });
     const data = await response.json();
     console.log(data);
-    alert("Added to Current");
+    toast.success('Successfully added!', {className: "toaster"})
 }
 
   return (
     <div>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
       <Button onClick={handleOpen}><AddIcon className="plus-button" sx={{ fontSize: "2.5rem" }}></AddIcon></Button>
       <Modal
         aria-labelledby="transition-modal-title"

@@ -5,6 +5,7 @@ import TuneIcon from '@mui/icons-material/Tune';
 import Footer from "../components/Footer.js";
 import TopDeskNav from "../components/TopDeskNav.js";
 import { useState, useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 export default function CurrentPage () {
     const [series, setSeries] = useState([]);
@@ -32,6 +33,11 @@ export default function CurrentPage () {
 
     return (
         <main className="explore-main">
+            <Toaster className="toaster"
+                position="bottom-center"
+                reverseOrder={false}
+                fontFamily='forma-djr-text'
+            />
             <TopDeskNav />
             <div className="search-container">
                 <form className="search-form">

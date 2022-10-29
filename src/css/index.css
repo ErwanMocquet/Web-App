@@ -775,6 +775,10 @@ body{
 
     /* EXPLORE PAGE DESKTOP (Igor) */
 
+    .search-container {
+        position: initial;
+    }
+
     .search-form, .search-input {
         width: 30%;
     }
