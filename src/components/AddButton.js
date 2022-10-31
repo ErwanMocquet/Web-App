@@ -1,3 +1,4 @@
+/* MADE BY IGOR */
 import * as React from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
@@ -6,16 +7,16 @@ import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import { useEffect, useState } from 'react';
-import toast, { Toaster } from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 200,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  width: 250,
+  bgcolor: '#e2e2e2', 
+  border: 'none',
   boxShadow: 24,
   p: 4,
   fontFamily: 'forma-djr-deck',
@@ -35,7 +36,6 @@ export default function AddButton({ post }) {
   }, [post]);
 
   async function addWishlist() {
-      // the trick is to add a "database" name to the end of the url. This "database" is automatically created
       const url = "https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/wishlist.json";
       const response = await fetch(url, {
           method: "POST", 
@@ -47,7 +47,6 @@ export default function AddButton({ post }) {
   } 
 
   async function addCurrent() {
-    // the trick is to add a "database" name to the end of the url. This "database" is automatically created
     const url = "https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/current.json";
     const response = await fetch(url, {
         method: "POST", 
@@ -60,10 +59,6 @@ export default function AddButton({ post }) {
 
   return (
     <div>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-      />
       <Button onClick={handleOpen}><AddIcon className="plus-button" sx={{ fontSize: "2.5rem" }}></AddIcon></Button>
       <Modal
         aria-labelledby="transition-modal-title"

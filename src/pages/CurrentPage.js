@@ -1,3 +1,4 @@
+/* MADE BY ERWAN AND IGOR */
 import Cards from "../components/CurrentCards.js";
 import BottomNav from "../components/BottomNav";
 import TopNav from "../components/TopNav";
@@ -46,13 +47,31 @@ export default function CurrentPage () {
                         ))}
                     </div>
                 ) : (
-                    <p>Nothing to show</p>
+                    <p className="emptyseries">To see your series, go to Explore and add them</p>
                 )}
                 </div>
                 <h1 className="heading-current">Not watched for a while</h1>
                 <div className="container-desktop-current-cards">
+                {isPosts ? (
+                    <div className="currentbox">
+                        {posts.map((post) => (
+                            <Cards key={post.id} post={post} />
+                        ))}
+                    </div>
+                ) : (
+                    <p className="emptyseries">To see your series, go to Explore and add them</p>
+                )}
                 </div>
                 <h1 className="heading-current">Stopped</h1>
+                {isPosts ? (
+                    <div className="currentbox">
+                        {posts.map((post) => (
+                            <Cards key={post.id} post={post} />
+                        ))}
+                    </div>
+                ) : (
+                    <p className="emptyseries">To see your series, go to Explore and add them</p>
+                )}
                 <div className="container-desktop-current-cards">
                 </div>
             </div>

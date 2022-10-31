@@ -97,7 +97,7 @@
 
 .card-container{
     display: grid;
-    grid-template-columns: 2fr 2fr 0.5fr;
+    grid-template-columns: 1.4fr 1.9fr 0.7fr;
     position: relative;
     justify-content: center;
     width: 85%;
@@ -106,25 +106,27 @@
 }
 
 .image-cards-container{
-    height: 10.1em;
+    height: 100%;
     overflow: hidden;
     border-radius: 20px 0 0 20px;
 }
 
 .image-cards{
-    width: 230%;
+    width: 180%;
     position: relative;
-    right: 50%;
+    right: 40%;
 }
 
 .content-container{
     width: auto;
-    margin-left: 1rem;
+    margin-left: 0.6rem;
+    margin-right: 0.4em;
+    margin-top: 0.7em;
     color: black;
 }
 
 .platform-cards{
-    width: 15%;
+    width: 25%;
 }
 
 .profile-cards-container{
@@ -149,7 +151,7 @@
 .card-gradient {
     position: relative;
     z-index: 1;
-    height: 10.1em;
+    height: 15em;
 }
 
 .card-gradient:after {
@@ -171,7 +173,7 @@
 }
 
 .description-content-card{
-    font-size: 0.9rem;
+    font-size: 78%;
 }
 
 .add-series-arrow-container{
@@ -180,9 +182,11 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 3rem;
+    height: 3rem;
     margin-top: 30%;
+    border: none;
+    cursor: pointer;
 }
 
 .add-series-arrow{
@@ -199,6 +203,7 @@
     width: 85%;
     background-color: var(--grey);
     border-radius: 20px;
+    height: 11.5em;
 }
 
 .upcoming-content-container {
@@ -208,7 +213,7 @@
 }
 
 .upcoming-image-cards-container {
-    height: 11rem;
+    height: 11.5rem;
     overflow: hidden;
     border-radius: 20px 0 0 20px;
 }
@@ -216,7 +221,7 @@
 .upcoming-card-gradient {
     position: relative;
     z-index: 1;
-    height: 11em;
+    height: 11.5em;
 }
 
 .upcoming-card-gradient:after {
@@ -245,7 +250,7 @@
     text-align: center;
     background-color: var(--grey);
     border-radius: 20px;
-    width: 9.6rem;
+    width: 12rem;
     height: 26rem;
     margin-top: 2em;
     margin-right: 2em;
@@ -253,7 +258,7 @@
 }
 
 .image-explore-cards-container{
-    width: 9.6rem;
+    width: 12rem;
     height: 10rem;
     overflow: hidden;
     border-radius: 20px 20px 0 0px;
@@ -264,9 +269,9 @@
 }
 
 .image-explore-cards{
-    width: 150%;
+    width: 120%;
     position: relative;
-    right: 20%;
+    right: 10%;
 }
 
 .explore-profile-cards-container{
@@ -328,7 +333,7 @@
     color: var(--grey);
 }
 
-/* AddButton (Igor) */
+/* AddButton (Igor & Kate) */
 .modalbox {
     font-family: forma-djr-deck, sans-serif;
 }
@@ -347,12 +352,22 @@
 }
 
 .modalbox-button {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
     font-size: 1.4em;
     font-family: forma-djr-deck, sans-serif;
-    width: 8em;
+    width: 9em;
+    height: 2.5rem;
     border-radius: 25px;
+    background-color: var(--peach);
+    border: none;
+    cursor: pointer;
 }
+
+.modalbox-button:hover {
+    border: 4px solid #F0BD8C ;
+    background-color: #e2e2e2;
+}
+
 
 /* DESCRIPTION COMPONENTS (KATE) */
 /* THE TOP (KATE) */
@@ -701,7 +716,7 @@
         right: 4%;
     }
 
-    .container-desktop-current-cards{
+    .currentbox{
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -725,6 +740,7 @@
         grid-template-columns: none;
         grid-template-rows: 0.8fr 0.2fr;
         margin: 4rem 0;
+        height: 20em;
     }
 
     .upcoming-image-cards-container{
@@ -766,7 +782,7 @@
     .desktop-description-image {
         width: 100%;
         position: relative;
-        bottom: 110%;
+        bottom: 80%;
     }
 
     .desktop-text-container{
@@ -777,7 +793,7 @@
         font-family: forma-djr-deck, sans-serif;
         font-size: 2.5rem;
         padding-left: 5%;
-        padding-bottom: 7%;
+        padding-bottom: 5%;
     }
 
     .desktop-description-text {
@@ -864,8 +880,72 @@
     .desktop-plus-button {
         display: block;
     }
-}
 
+    /* EXPLORE cards (KATIE) */
+    .explore-card-container {
+            width: 18rem;
+            height: 24rem;
+            margin-left: 2rem;
+        }
+        
+        .image-explore-cards-container{
+            width: 18rem;
+        }
+        
+        .image-explore-cards{
+            width: 100%;
+            right: 0%;
+        }
+        
+        .explore-profile-cards-container{
+            width: 2rem;
+        }
+        
+        .explore-content-container {
+            margin-left: 1.3rem;
+            margin-top: 7%;
+        }
+        
+        .explore-content-card{
+            font-size: 1rem;
+        }
+        
+        .platform-icons {
+            width: 15%;
+            margin-top: 6%;
+        }
+        
+        .plus-button-container{
+            bottom: 4%;
+            left: 80%;
+            z-index: 99;
+        }
+    }
 
+    /* HISTORY CARDS (MAGDALENA) */
+    .history-card-container {
+        display: grid;
+        grid-template-rows: 1fr 2fr 0.3fr;
+        position: relative;
+        text-align: center;
+        background-color: var(--grey);
+        border-radius: 20px;
+        width: 9.6rem;
+        height: 26rem;
+        margin-top: 2em;
+        margin-right: 2em;
+        margin-left: 1em;
+    }
 
+    .image-history-cards-container {
+        width: 9.6rem;
+        height: 10rem;
+        overflow: hidden;
+        border-radius: 20px 20px 0 0px;
+    }
 
+    .image-history-cards{
+        width: 150%;
+        position: relative;
+        right: 20%;
+    }

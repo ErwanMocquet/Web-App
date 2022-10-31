@@ -1,3 +1,4 @@
+/* MADE BY KATE */
 import logoplain from "../img/logoplain.png";
 import { Link } from "react-router-dom";
 

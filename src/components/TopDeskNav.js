@@ -1,3 +1,4 @@
+/* MADE BY IGOR */
 import logoplain from "../img/logoplain.png";
 import { NavLink, Link } from "react-router-dom";
 

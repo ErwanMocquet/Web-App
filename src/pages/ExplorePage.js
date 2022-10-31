@@ -1,4 +1,4 @@
-/* So far made by Katie and Igor */
+/* MADE BY KATE AND IGOR */
 import ExploreCards from "../components/ExploreCards.js";
 import BottomNav from "../components/BottomNav";
 import TuneIcon from '@mui/icons-material/Tune';
@@ -56,7 +56,7 @@ export default function CurrentPage () {
                             ))}
                         </div>
                     ) : (
-                    <p>No series to show</p>
+                    <p className="emptyseries">No series to show</p>
                     )}
                 </div>
             </div>

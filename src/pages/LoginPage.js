@@ -1,4 +1,4 @@
-/* MADE BY ERWAN */
+/* MADE BY ERWAN AND IGOR (dektop) */
 import {Link} from "react-router-dom";
 import greylogo from "../img/greylogo.png";
 import ContinueWith from "../components/ContinueWith";

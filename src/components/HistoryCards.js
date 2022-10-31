@@ -1,15 +1,15 @@
-/* MADE BY KATIE */
+/* MADE BY MAGDALENA HEAVILY INSPIRED BY KATIE */
 import barbarians from "../img/barbarians.jpg";
 import netflix from "../img/netflix-icon.png"
 
 
-export default function ExploreCards () {
+export default function HistoryCards () {
     return (
-            <section className="explore-card-container">
+            <section className="history-card-container">
                 
-                <figure className="image-explore-cards-container">
+                <figure className="image-history-cards-container">
                     <div className="explore-card-gradient">
-                        <img className="image-explore-cards" src={barbarians} alt="Barbarians season 2"></img>
+                        <img className="image-history-cards" src={barbarians} alt="Barbarians season 2"></img>
                     </div>
                 </figure>
                 <article className="explore-content-container">

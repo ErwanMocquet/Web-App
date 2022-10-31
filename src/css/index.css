@@ -307,9 +307,6 @@ body{
     width: 90%;
 }
 
-
-    
-
 .profile-history-cards-outer {
     width: 100%;
     overflow-y: hidden; /* no scroll on y-axis (up-down), only x-axis (left-right) */
@@ -359,52 +356,7 @@ body{
 	outline: inherit;  
 }
 
-@media only screen and (min-width: 1000px) {
-    .profile-page-container {
-            margin-top: 90px; /* to make space for top bar on desktop */
-    }
-    .profile-page-left {
-            width: 30%;
-            height: 100%;
-    }
-    
-    .profile-page-right {
-            width: 70%;
-    }
-    
-    .profile-page {
-            display: flex;
-    }
-    
-    .profile-bio-outer {
-            color: black;
-            border-radius: 10%;
-            background: white;
-            padding: 20px;
-            box-sizing: border-box;
-    }
-    
-    .follow-button {
-            color: black !important;
-    }
-    .profile-history-cards-outer {
-            width: 100%;
-            overflow: hidden; /* no scroll on desktop */
-    }
-    .profile-history-card {
-            max-width: 200px;
-    }
-    
-    .profile-history-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            width: 100%;
-            justify-content: space-around;
-    }
-}
-
-/* FOLLOWING PAGE (MAGDALENA) */
+/* FOLLOWING/FOLLOWERS PAGE (MAGDALENA) */
 .following-back-outer {
     display: flex;
     gap: 35px;
@@ -412,6 +364,44 @@ body{
     justify-content: space-between;
     
 }
+
+.search-container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    background-color: var(--darkblue);
+    z-index: 9999;
+    padding-bottom: 1em;
+}
+
+.button-seeprofile {
+    border-radius: 20px;
+    background-color: var(--peach);
+    color: var(--darkblue);
+    font-family: forma-djr-text, sans-serif;
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.example-user-list-container {
+    display: flex;
+    font-family: forma-djr-text, sans-serif;
+    margin: 10px;
+    align-content: center;
+    justify-content: center;
+}
+
+.follower-list-item {
+    color: white;
+    display: flex;
+    align-items: center;
+    max-width: 390px;
+}
+
 
 /* SETTINGS STYLE (MAGDALENA) */
 .settings-icon-desktop {
@@ -586,7 +576,7 @@ body{
 }
 
 .for-you-main {
-    margin-top: 2rem;
+    margin-top: 6rem;
     margin-left: 2rem;
 }
 
@@ -773,19 +763,53 @@ body{
     }
     /* end of landing and login pages */
 
-    /* EXPLORE PAGE DESKTOP (Igor) */
+    /* EXPLORE PAGE DESKTOP (Igor & Kate) */
+
+    .search-input {
+        margin-right: 60%;
+    }
 
     .search-container {
         position: initial;
     }
 
     .search-form, .search-input {
-        width: 30%;
+        width: 40%;
+        height: 3rem;
+    }
+
+    .for-you-main {
+        margin-top: 4rem;
+    }
+
+    .explore-heading-one {
+        padding-top: 30px;
+        font-size: 2.5rem;
+    }
+
+    .cards-container {
+        padding-bottom: 3%;
     }
     
     .cards-container::-webkit-scrollbar {
-        display: none;
+        display: contents;
+        height: 10px;
+        width: 0;
     }
+
+    .cards-container::-webkit-scrollbar-track {
+        background: var(--darkblue);
+        margin-left: 30px;
+      }
+
+    .cards-container::-webkit-scrollbar-thumb {
+        background: var(--peach);
+        border-radius: 20px;
+      }
+
+    .cards-container::-webkit-scrollbar-thumb:hover {
+        background: #a07e5e; 
+      }
 
     /* SETTINGS PAGE (MAGGIE) */
     .settings-icon-mobile {
@@ -820,9 +844,49 @@ body{
         display: block;
     }
 
-    /* EXPLORE PAGE (KATE) */
-    .search-input {
-        margin-right: 60%;
-    }
+   
     
+    /* PROFILE PAGE (MAGDALENA) */
+    .profile-page-container {
+        margin-top: 90px; /* to make space for top bar on desktop */
+    }
+    .profile-page-left {
+            width: 30%;
+            height: 100%;
+    }
+
+    .profile-page-right {
+            width: 70%;
+    }
+
+    .profile-page {
+            display: flex;
+    }
+
+    .profile-bio-outer {
+            color: black;
+            border-radius: 10%;
+            background: white;
+            padding: 20px;
+            box-sizing: border-box;
+    }
+
+    .follow-button {
+            color: black !important;
+    }
+    .profile-history-cards-outer {
+            width: 100%;
+            overflow: hidden; /* no scroll on desktop */
+    }
+    .profile-history-card {
+            max-width: 200px;
+    }
+
+    .profile-history-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+            justify-content: space-around;
+    }
 }

@@ -1,8 +1,9 @@
-/* MADE BY ERWAN */
+/* MADE BY ERWAN AND IGOR */
 import AddIcon from '@mui/icons-material/Add';
 import KateProfile from "../img/karuno.svg";
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
+import { toast } from 'react-hot-toast';
 
 export default function WishlistCard({ post }) {
     const [card, setCard] = useState([])
@@ -21,8 +22,14 @@ export default function WishlistCard({ post }) {
         });
         const data = await response.json();
         console.log(data);
-        alert("Added to Current");
+        toast.success('Successfully added!', {className: "toaster"})
     }
+
+    const datapass = {
+        name: post.name,
+        overall: post.overall,
+        image: post.image_thumbnail_path,
+    };
 
     return(
         <main className="main-card">
@@ -31,14 +38,14 @@ export default function WishlistCard({ post }) {
                 <img className="profile-cards" src={KateProfile} alt="Follower's profile"></img>
                 <img className="profile-cards" src={KateProfile} alt="Follower's profile"></img>
             </div>
-            <Link to="/description">
+            <Link to="/description" state={{ datapass }}>
             <figure className="image-cards-container">
                 <div className="card-gradient">
                     <img className="image-cards" src={post.image_thumbnail_path} alt="Barbarians season 2"></img>
                 </div>
             </figure>
             </Link>
-            <Link to="/description">
+            <Link to="/description" state={{ datapass }}>
             <article className="content-container">
                 <h1 className="text-cards title-content-card">{post.name}</h1>
                 <h2 className="text-cards whereat-content-card">{post.seasnum} season</h2>
@@ -48,9 +55,12 @@ export default function WishlistCard({ post }) {
                 </div>
             </article>
             </Link>
-            <div className="add-series-arrow-container">
-                <button onClick={addCurrent}><AddIcon className="add-series-arrow"></AddIcon></button>
-            </div>
+            <button className="add-series-arrow-container desktop" onClick={addCurrent}>
+                <AddIcon className="add-series-arrow"></AddIcon>
+            </button>
+            <button className="add-series-arrow-container mobile" onClick={addCurrent}>
+                <AddIcon className="add-series-arrow" sx={{ fontSize: "2.5rem" }}></AddIcon>
+            </button>
         </section>
         </main>
     )

@@ -13,7 +13,7 @@ export default function UpcomingPage () {
             <BottomNav />
             <SecondDeskNav />
             <div className="upcoming-main">
-                <div className="container-desktop-current-cards">
+                <div className="currentbox">
                     <Cards />
                     <Cards />
                 </div>

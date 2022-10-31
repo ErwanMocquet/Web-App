@@ -22,7 +22,7 @@ export default function UpcomingPage() {
                 <h1 className="text-cards title-content-card">Series Name</h1>
                 <h2 className="text-cards whereat-content-card">Coming in October 2022</h2>
                 <p className="text-cards description-content-card">This is a small description of the episode and what's happening in it.</p>
-                <div className="platform-cards-container">
+                <div className="platform-cards-container upcomingplatform">
                     <img className="platform-cards" src={netflix} alt="Netflix logo"></img>
                 </div>
             </article>

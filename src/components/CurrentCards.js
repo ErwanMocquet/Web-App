@@ -1,15 +1,22 @@
-/* MADE BY ERWAN and Igor */
+/* MADE BY ERWAN AND IGOR */
 import { Link } from "react-router-dom";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import KateProfile from "../img/karuno.svg";
+import { useState } from "react";
 
 export default function Cards({ post }) {
     
-    let episode = 1;
+    const [episode, setCount] = useState(1)
 
-    function oneUp() {
-        episode++;
+    const updateCount = () => {
+        setCount(episode + 1)
     }
+
+    const datapass = {
+        name: post.name,
+        overall: post.overall,
+        image: post.image_thumbnail_path,
+    };
 
     return(
         <main className="main-card">
@@ -18,14 +25,14 @@ export default function Cards({ post }) {
                 <img className="profile-cards" src={KateProfile} alt="Follower's profile"></img>
                 <img className="profile-cards" src={KateProfile} alt="Follower's profile"></img>
             </div>
-            <Link to="/description">
+            <Link to="/description" state={{ datapass }}>
             <figure className="image-cards-container">
                 <div className="card-gradient">
                     <img className="image-cards" src={post.image_thumbnail_path} alt="Barbarians season 2"></img>
                 </div>
             </figure>
             </Link>
-            <Link to="/description">
+            <Link to="/description" state={{ datapass }}>
             <article className="content-container">
                 <h1 className="text-cards title-content-card">{post.name}</h1>
                 <h2 className="text-cards whereat-content-card">S1 | E{episode}</h2>
@@ -35,9 +42,12 @@ export default function Cards({ post }) {
                 </div>
             </article>
             </Link>
-            <div className="add-series-arrow-container" onClick={oneUp()}>
+            <button className="add-series-arrow-container desktop" onClick={updateCount}>
                 <ArrowUpwardIcon className="add-series-arrow"></ArrowUpwardIcon>
-            </div>
+            </button>
+            <button className="add-series-arrow-container mobile" onClick={updateCount}>
+                <ArrowUpwardIcon className="add-series-arrow" sx={{ fontSize: "2.5rem" }}></ArrowUpwardIcon>
+            </button>
         </section>
         </main>
     )

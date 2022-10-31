@@ -1,3 +1,4 @@
+/* MADE BY IGOR */
 import WishlistCard from "../components/WishlistCards.js";
 import BottomNav from "../components/BottomNav";
 import TopNav from "../components/TopNav";
@@ -5,6 +6,7 @@ import Footer from "../components/Footer.js";
 import TopDeskNav from "../components/TopDeskNav.js";
 import SecondDeskNav from "../components/SecondDeskNav.js";
 import { useState, useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 export default function WishlistPage () {
 
@@ -32,6 +34,11 @@ export default function WishlistPage () {
 
     return (
         <div>
+            <Toaster className="toaster"
+                position="bottom-center"
+                reverseOrder={false}
+                fontFamily='forma-djr-text'
+            />
             <TopDeskNav />
             <TopNav />
             <BottomNav />
@@ -39,13 +46,13 @@ export default function WishlistPage () {
             <div className="wishlist-main">
                 <div className="container-desktop-current-cards">
                 {isPosts ? (
-                    <div className="flexbox">
+                    <div className="currentbox">
                         {posts.map((post) => (
                             <WishlistCard key={post.id} post={post} />
                         ))}
                     </div>
                 ) : (
-                    <p>Nothing to show</p>
+                    <p className="emptyseries">To see your series, go to Explore and add them</p>
                 )}
                 </div>
             </div>

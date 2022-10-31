@@ -1,3 +1,4 @@
+/* MADE BY IGOR */
 import logoplain from "../img/logoplain.png";
 export default function LandingDesktopLeft() {
     return (
