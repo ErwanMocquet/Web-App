@@ -649,6 +649,13 @@ body{
     display: none;
 }
 
+.emptyseries {
+    font-family: forma-djr-text, sans-serif;
+    color: var(--grey);
+    font-size: 1.2em;
+    margin-left: 2.5em;
+}
+
 /* IMPORTANT */
 /* ! ! ! ! ! DESKTOP VERSIONS ! ! ! ! ! */
 

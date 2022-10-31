@@ -782,7 +782,7 @@
     .desktop-description-image {
         width: 100%;
         position: relative;
-        bottom: 80%;
+        bottom: 10%;
     }
 
     .desktop-text-container{

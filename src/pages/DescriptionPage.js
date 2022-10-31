@@ -17,7 +17,7 @@ export default function DescriptionPage() {
         <section>
             <TopDeskNav />
             <div className="back-button-container">
-                <Link to="/current"><ArrowBackIosNewIcon className="back-button" sx={{ fontSize: "2.5rem" }}/></Link>
+                <Link to="/explore"><ArrowBackIosNewIcon className="back-button" sx={{ fontSize: "2.5rem" }}/></Link>
             </div>
             <DescriptionTop datapass={datapass}/>
             <div className="background1 mobile">
