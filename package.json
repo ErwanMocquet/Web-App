@@ -2,7 +2,7 @@
   "name": "coding_v2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://frenchindenmark.dk/",
+  "homepage": "https://igorlech.dk/",
   "dependencies": {
     "@coreui/coreui": "^4.2.2",
     "@coreui/react": "^4.4.0",
