@@ -22,8 +22,9 @@ const style = {
   fontFamily: 'forma-djr-deck',
   borderRadius: 5
 };
-
 export default function AddButton({ post }) {
+
+  // MODAL HANDLER
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -35,6 +36,7 @@ export default function AddButton({ post }) {
     }
   }, [post]);
 
+  // ADDING SHOW TO THE WISHLIST
   async function addWishlist() {
       const url = "https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/wishlist.json";
       const response = await fetch(url, {
@@ -43,9 +45,10 @@ export default function AddButton({ post }) {
       });
       const data = await response.json();
       console.log(data);
-      toast.success('Successfully added!', {className: "toaster"})
+      toast.success('Successfully added to Wishlist!', {className: "toaster"})
   } 
 
+  // ADDING SHOW TO THE CURRENT
   async function addCurrent() {
     const url = "https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/current.json";
     const response = await fetch(url, {
@@ -54,7 +57,7 @@ export default function AddButton({ post }) {
     });
     const data = await response.json();
     console.log(data);
-    toast.success('Successfully added!', {className: "toaster"})
+    toast.success('Successfully added to Current!', {className: "toaster"})
 }
 
   return (

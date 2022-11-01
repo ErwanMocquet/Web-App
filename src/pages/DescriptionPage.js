@@ -10,9 +10,12 @@ import TopDeskNav from "../components/TopDeskNav.js";
 import { useLocation } from "react-router-dom";
 
 export default function DescriptionPage() {
+
+    // GETTING THE DATA PASSED FROM CARDS
     const location = useLocation();
     const datapass = location.state
     console.log(datapass)
+    
     return (
         <section>
             <TopDeskNav />

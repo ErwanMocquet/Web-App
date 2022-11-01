@@ -13,6 +13,8 @@ export default function WishlistPage () {
     const [posts, setPosts] = useState([]);
     const [isPosts, setIsPosts] = useState(true);
     
+
+    // FETCHING DATA FROM THE DATABASE
     useEffect(() => {
         async function getPosts() {
         const url =

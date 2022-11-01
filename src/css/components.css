@@ -113,6 +113,7 @@
 
 .image-cards{
     width: 180%;
+    height: 100%;
     position: relative;
     right: 40%;
 }
@@ -148,28 +149,16 @@
     margin: 0.5rem 0;
 }
 
-.card-gradient {
-    position: relative;
-    z-index: 1;
-    height: 15em;
-}
-
-.card-gradient:after {
-    content: '';
-    border-radius: 20px 0 0 20px;
-    position: absolute;
-    left: 0.5em; top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, transparent, 70%, var(--grey))
-}
-
 .title-content-card{
     font-size: 1.2rem;
 }
 
 .whereat-content-card{
     font-size: 1rem;
+}
+
+.crntepisode {
+    font-size: 1.6em;
 }
 
 .description-content-card{
@@ -218,7 +207,7 @@
     border-radius: 20px 0 0 20px;
 }
 
-.upcoming-card-gradient {
+/* .upcoming-card-gradient {
     position: relative;
     z-index: 1;
     height: 11.5em;
@@ -232,7 +221,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, transparent, 70%, var(--grey))
-}
+} */
 
 .image-cards-upcoming{
     width: 230%;
@@ -696,12 +685,13 @@
 
     .image-cards-container{
         border-radius: 20px 20px 0 0;
-        height: 8rem;
+        height: 9rem;
     }
 
     .image-cards{
         width: 100%;
         right: 0;
+        height: 250%;
     }
 
     .card-gradient:after{

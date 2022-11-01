@@ -6,12 +6,14 @@ import { useState } from "react";
 
 export default function Cards({ post }) {
     
+    // EPISODE UPDATE BUTTON
     const [episode, setCount] = useState(1)
 
     const updateCount = () => {
         setCount(episode + 1)
     }
 
+    // PASSING DATA TO THE DESCRIPTION PAGE
     const datapass = {
         name: post.name,
         overall: post.overall,
@@ -27,15 +29,13 @@ export default function Cards({ post }) {
             </div>
             <Link to="/description" state={{ datapass }}>
             <figure className="image-cards-container">
-                <div className="card-gradient">
                     <img className="image-cards" src={post.image_thumbnail_path} alt="Barbarians season 2"></img>
-                </div>
             </figure>
             </Link>
             <Link to="/description" state={{ datapass }}>
             <article className="content-container">
                 <h1 className="text-cards title-content-card">{post.name}</h1>
-                <h2 className="text-cards whereat-content-card">S1 | E{episode}</h2>
+                <h2 className="text-cards whereat-content-card crntepisode">S1 | E{episode}</h2>
                 <p className="text-cards description-content-card">{post.lastepisode}</p>
                 <div className="platform-cards-container">
                     <img className="platform-cards" src={post.source} alt="Netflix logo"></img>

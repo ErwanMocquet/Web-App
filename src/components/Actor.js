@@ -1,3 +1,4 @@
+/* MADE BY MAGDALENA */
 import KateProfile from "../img/karuno.svg";
 
 export default function Actor () {

@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 
 export default function ExploreCards ({ post }) {
+
+    // PASSING DATA TO THE DESCRIPTION PAGE
     const datapass = {
         name: post.name,
         overall: post.overall,

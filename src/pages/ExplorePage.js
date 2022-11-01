@@ -10,7 +10,8 @@ import { Toaster } from "react-hot-toast";
 export default function CurrentPage () {
     const [series, setSeries] = useState([]);
     const [isSeries, setIsSeries] = useState(true);
-  
+    
+    // FETCHING SERIES FROM DATABASE
     useEffect(() => {
         async function getSeries() {
             const url = "https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/series.json";

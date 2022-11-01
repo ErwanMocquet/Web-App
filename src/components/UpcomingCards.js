@@ -14,9 +14,7 @@ export default function UpcomingPage() {
                 <img className="profile-cards" src={KateProfile} alt="Follower's profile"></img>
             </div>
             <figure className="upcoming-image-cards-container">
-                <div className="upcoming-card-gradient">
                     <img className="image-cards-upcoming" src={barbarians} alt="Barbarians season 2"></img>
-                </div>
             </figure>
             <article className="upcoming-content-container">
                 <h1 className="text-cards title-content-card">Series Name</h1>

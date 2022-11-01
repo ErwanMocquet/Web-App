@@ -14,6 +14,7 @@ export default function WishlistCard({ post }) {
         }
     }, [post]);
 
+    // ADDING FROM WISHLIST TO CURRENT
     async function addCurrent() {
         const url = "https://webapp-series-default-rtdb.europe-west1.firebasedatabase.app/current.json";
         const response = await fetch(url, {
@@ -22,9 +23,10 @@ export default function WishlistCard({ post }) {
         });
         const data = await response.json();
         console.log(data);
-        toast.success('Successfully added!', {className: "toaster"})
+        toast.success('Successfully added to Current!', {className: "toaster"})
     }
 
+    // PASSING DATA TO THE DESCRIPTION PAGE
     const datapass = {
         name: post.name,
         overall: post.overall,
@@ -40,9 +42,7 @@ export default function WishlistCard({ post }) {
             </div>
             <Link to="/description" state={{ datapass }}>
             <figure className="image-cards-container">
-                <div className="card-gradient">
-                    <img className="image-cards" src={post.image_thumbnail_path} alt="Barbarians season 2"></img>
-                </div>
+                    <img className="image-cards" src={post.image_thumbnail_path} alt="Series"></img>
             </figure>
             </Link>
             <Link to="/description" state={{ datapass }}>
@@ -51,7 +51,7 @@ export default function WishlistCard({ post }) {
                 <h2 className="text-cards whereat-content-card">{post.seasnum} season</h2>
                 <p className="text-cards description-content-card">{post.lastepisode}</p>
                 <div className="platform-cards-container">
-                    <img className="platform-cards" src={post.source} alt="Netflix logo"></img>
+                    <img className="platform-cards" src={post.source} alt="Platform logo"></img>
                 </div>
             </article>
             </Link>
